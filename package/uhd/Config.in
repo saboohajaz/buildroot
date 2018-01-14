@@ -1,0 +1,25 @@
+config BR2_PACKAGE_UHD
+	bool "uhd"
+depends on BR2_INSTALL_LIBSTDCPP
+	depends on !BR2_STATIC_LIBS
+	depends on BR2_TOOLCHAIN_HAS_THREADS_NPTL
+	depends on BR2_USE_MMU # use fork()
+	depends on BR2_USE_WCHAR # boost
+	select BR2_PACKAGE_BOOST
+	select BR2_PACKAGE_BOOST_DATE_TIME
+	select BR2_PACKAGE_BOOST_FILESYSTEM
+	select BR2_PACKAGE_BOOST_PROGRAM_OPTIONS
+	select BR2_PACKAGE_BOOST_REGEX
+	select BR2_PACKAGE_BOOST_SYSTEM
+	select BR2_PACKAGE_BOOST_THREAD
+
+	select HOST_PYTHON_MAKO
+	select HOST_PKGCONF
+	#select HOST_PYTHON_REQUESTS
+			   	
+	help
+	  UHD
+	  http://gnuradio.org/
+		xselect HOST_PYTHON_REQUESTS
+		xselect HOST_PYTHON_REQUESTS_TOOLBELT
+
