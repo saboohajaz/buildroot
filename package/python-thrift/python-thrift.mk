@@ -12,3 +12,4 @@ PYTHON_THRIFT_LICENSE_FILES = setup.py
 PYTHON_THRIFT_SETUP_TYPE = setuptools
 
 $(eval $(python-package))
+$(eval $(host-python-package))

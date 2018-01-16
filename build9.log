@@ -1,0 +1,1745 @@
+gnuradio-3.7.11.tar.gz: OK (sha256: 87d9ba3183858efdbb237add3f9de40f7d65f25e16904a9bc8d764a7287252d4)
+[7m>>> gnuradio 3.7.11 Extracting[27m
+gzip -d -c /home/sabooh/buildroot_try5/buildroot/dl/gnuradio-3.7.11.tar.gz | tar --strip-components=1 -C /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11   -xf -
+[7m>>> gnuradio 3.7.11 Patching[27m
+
+Applying 0001-suppress-boost_unitest-detection.patch using patch: 
+patching file volk/cmake/Modules/VolkBoost.cmake
+patching file volk/lib/CMakeLists.txt
+Hunk #1 succeeded at 590 (offset 10 lines).
+Hunk #2 succeeded at 610 (offset 10 lines).
+[7m>>> gnuradio 3.7.11 Configuring[27m
+(mkdir -p /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11//buildroot-build && cd /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11//buildroot-build && rm -f CMakeCache.txt && PATH="/home/sabooh/buildroot_try5/buildroot/output/host/bin:/home/sabooh/buildroot_try5/buildroot/output/host/sbin:/home/sabooh/bin:/home/sabooh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"  /usr/bin/cmake /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/ -DCMAKE_TOOLCHAIN_FILE="/home/sabooh/buildroot_try5/buildroot/output/host/share/buildroot/toolchainfile.cmake" -DCMAKE_INSTALL_PREFIX="/usr" -DCMAKE_COLOR_MAKEFILE=OFF -DBUILD_DOC=OFF -DBUILD_DOCS=OFF -DBUILD_EXAMPLE=OFF -DBUILD_EXAMPLES=OFF -DBUILD_TEST=OFF -DBUILD_TESTS=OFF -DBUILD_TESTING=OFF -DBUILD_SHARED_LIBS=ON  -DENABLE_DEFAULT=ON -DENABLE_VOLK=ON -DENABLE_GNURADIO_RUNTIME=ON -DCMAKE_EXE_LINKER_FLAGS=-latomic -DCMAKE_C_FLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os  -march=armv7-a" -DENABLE_GR_ANALOG=ON -DENABLE_GR_AUDIO=ON -DENABLE_GR_BLOCKS=ON -DENABLE_GR_CHANNELS=ON -DENABLE_GR_CTRLPORT=ON -DENABLE_GR_DIGITAL=ON -DENABLE_GR_FEC=ON -DENABLE_GR_FFT=ON -DENABLE_GR_FILTER=ON -DENABLE_PYTHON=ON -DENABLE_PAGER=ON -DENABLE_GR_TRELLIS=ON -DENABLE_GR_UTILS=ON -DENABLE_GR_WXGUI=OFF -DENABLE_GR_VOCODER=OFF -DENABLE_TESTING=OFF -DENABLE_GR_COMEDI=OFF -DENABLE_GR_WAVELET=OFF -DENABLE_GR_NOAA=OFF -DENABLE_GR_PAGER=OFF -DENABLE_GR_FCD=OFF )
+-- The CXX compiler identification is GNU 6.4.1
+-- The C compiler identification is GNU 6.4.1
+-- Check for working CXX compiler: /home/sabooh/buildroot_try5/buildroot/output/host/bin/arm-linux-gnueabihf-g++
+-- Check for working CXX compiler: /home/sabooh/buildroot_try5/buildroot/output/host/bin/arm-linux-gnueabihf-g++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Check for working C compiler: /home/sabooh/buildroot_try5/buildroot/output/host/bin/arm-linux-gnueabihf-gcc
+-- Check for working C compiler: /home/sabooh/buildroot_try5/buildroot/output/host/bin/arm-linux-gnueabihf-gcc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Build type set to Release.
+-- Found Git: /usr/bin/git  
+-- Performing Test HAVE_VISIBILITY_HIDDEN
+-- Performing Test HAVE_VISIBILITY_HIDDEN - Success
+-- Performing Test HAVE_WARN_SIGN_COMPARE
+-- Performing Test HAVE_WARN_SIGN_COMPARE - Success
+-- Performing Test HAVE_WARN_ALL
+-- Performing Test HAVE_WARN_ALL - Success
+-- Performing Test HAVE_WARN_NO_UNINITIALIZED
+-- Performing Test HAVE_WARN_NO_UNINITIALIZED - Success
+-- Compiler Version: arm-linux-gnueabihf-gcc (Linaro GCC 6.4-2017.08) 6.4.1 20170707
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-- Compiler Flags: /home/sabooh/buildroot_try5/buildroot/output/host/bin/arm-linux-gnueabihf-gcc::: -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os  -march=armv7-a -std=gnu99 -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized
+/home/sabooh/buildroot_try5/buildroot/output/host/bin/arm-linux-gnueabihf-g++::: -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 -Os -std=c++98 -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized
+-- ADDING PERF COUNTERS
+-- Building Static Libraries: OFF
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  cmake/Modules/GrBoost.cmake:71 (find_package)
+  CMakeLists.txt:281 (include)
+
+
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  cmake/Modules/GrBoost.cmake:71 (find_package)
+  CMakeLists.txt:281 (include)
+
+
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  cmake/Modules/GrBoost.cmake:71 (find_package)
+  CMakeLists.txt:281 (include)
+
+
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  cmake/Modules/GrBoost.cmake:71 (find_package)
+  CMakeLists.txt:281 (include)
+
+
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  cmake/Modules/GrBoost.cmake:71 (find_package)
+  CMakeLists.txt:281 (include)
+
+
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  cmake/Modules/GrBoost.cmake:71 (find_package)
+  CMakeLists.txt:281 (include)
+
+
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   date_time
+--   program_options
+--   filesystem
+--   system
+--   regex
+--   thread
+-- Found PythonLibs: /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/libpython2.7.so (found suitable version "2.7.14", minimum required is "2") 
+-- 
+-- Checking for module SWIG
+-- Found SWIG version 3.0.12.
+-- Found SWIG: /home/sabooh/buildroot_try5/buildroot/output/host/bin/swig3.0  
+-- 
+-- Configuring python-support support...
+--   Dependency PYTHONLIBS_FOUND = TRUE
+--   Dependency SWIG_FOUND = TRUE
+--   Dependency SWIG_VERSION_CHECK = TRUE
+--   Enabling python-support support.
+--   Override with -DENABLE_PYTHON=ON/OFF
+-- Found PkgConfig: /home/sabooh/buildroot_try5/buildroot/output/host/bin/pkg-config (found version "0.28") 
+-- Checking for module 'cppunit'
+--   Package cppunit was not found in the pkg-config search path.
+Perhaps you should add the directory containing `cppunit.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'cppunit', required by 'world', not found
+-- Could NOT find CPPUNIT (missing:  CPPUNIT_INCLUDE_DIRS) 
+-- 
+-- Configuring testing-support support...
+--   Dependency CPPUNIT_FOUND = FALSE
+--   Disabling testing-support support.
+--   Override with -DENABLE_TESTING=ON/OFF
+-- 
+-- Configuring VOLK support...
+-- Build type set to Release.
+-- Found PythonInterp: /home/sabooh/buildroot_try5/buildroot/output/host/bin/python2 (found suitable version "2.7.14", minimum required is "2") 
+-- 
+-- Python checking for python >= 2.5
+-- Python checking for python >= 2.5 - found
+-- 
+-- Python checking for Cheetah >= 2.0.0
+-- Python checking for Cheetah >= 2.0.0 - found
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  volk/cmake/Modules/VolkBoost.cmake:53 (find_package)
+  volk/CMakeLists.txt:96 (include)
+
+
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  volk/cmake/Modules/VolkBoost.cmake:53 (find_package)
+  volk/CMakeLists.txt:96 (include)
+
+
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  volk/cmake/Modules/VolkBoost.cmake:53 (find_package)
+  volk/CMakeLists.txt:96 (include)
+
+
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   filesystem
+--   system
+--   program_options
+-- Checking for module 'orc-0.4 > 0.4.11'
+--   Found orc-0.4 > 0.4.11, version 0.4.27
+-- Found ORC: /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/liborc-0.4.so  
+-- Found Doxygen: /usr/bin/doxygen (found version "1.8.11") 
+-- QA Testing is disabled.
+--   Modify using: -DENABLE_TESTING=ON/OFF
+-- System profiling is disabled.
+--   Modify using: -DENABLE_PROFILING=ON/OFF
+-- Looking for cpuid.h
+-- Looking for cpuid.h - not found
+-- Looking for intrin.h
+-- Looking for intrin.h - not found
+-- Looking for fenv.h
+-- Looking for fenv.h - found
+-- Looking for dlfcn.h
+-- Looking for dlfcn.h - found
+-- Compiler name: GNU
+-- Performing Test HAVE_WERROR_UNUSED_CMD_LINE_ARG
+-- Performing Test HAVE_WERROR_UNUSED_CMD_LINE_ARG - Failed
+-- Looking for posix_memalign
+-- Looking for posix_memalign - found
+-- Performing Test have_mfloat_abi_softfp
+-- Performing Test have_mfloat_abi_softfp - Failed
+-- Performing Test have_mfloat_abi_hard
+-- Performing Test have_mfloat_abi_hard - Success
+-- Performing Test have_mfpu_neon
+-- Performing Test have_mfpu_neon - Success
+-- Performing Test have_funsafe_math_optimizations
+-- Performing Test have_funsafe_math_optimizations - Success
+-- Performing Test have_m32
+-- Performing Test have_m32 - Failed
+-- Performing Test have_m64
+-- Performing Test have_m64 - Failed
+-- Performing Test have_m3dnow
+-- Performing Test have_m3dnow - Failed
+-- Performing Test have_msse4_2
+-- Performing Test have_msse4_2 - Failed
+-- Performing Test have_mpopcnt
+-- Performing Test have_mpopcnt - Failed
+-- Performing Test have_mmmx
+-- Performing Test have_mmmx - Failed
+-- Performing Test have_mfma
+-- Performing Test have_mfma - Failed
+-- Performing Test have_msse
+-- Performing Test have_msse - Failed
+-- Performing Test have_msse2
+-- Performing Test have_msse2 - Failed
+-- Performing Test have_msse3
+-- Performing Test have_msse3 - Failed
+-- Performing Test have_mssse3
+-- Performing Test have_mssse3 - Failed
+-- Performing Test have_msse4a
+-- Performing Test have_msse4a - Failed
+-- Performing Test have_msse4_1
+-- Performing Test have_msse4_1 - Failed
+-- Performing Test have_mavx
+-- Performing Test have_mavx - Failed
+-- Performing Test have_mavx2
+-- Performing Test have_mavx2 - Failed
+-- Architecture is not x86 or x86_64, Overruled arch 3dnow
+-- Architecture is not x86 or x86_64, Overruled arch mmx
+-- Architecture is not x86 or x86_64, Overruled arch sse
+-- Architecture is not x86 or x86_64, Overruled arch sse2
+-- Architecture is not x86 or x86_64, Overruled arch sse3
+-- Architecture is not x86 or x86_64, Overruled arch ssse3
+-- Architecture is not x86 or x86_64, Overruled arch sse4_a
+-- Architecture is not x86 or x86_64, Overruled arch sse4_1
+-- Architecture is not x86 or x86_64, Overruled arch sse4_2
+-- Architecture is not x86 or x86_64, Overruled arch avx
+-- Available architectures: generic;hardfp;neon;orc;norc
+-- Available machines: generic_orc;neon_hardfp_orc
+-- BUILD TYPE = RELEASE
+-- Base cflags =  -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os  -march=armv7-a -std=gnu99 -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -Wall
+-- BUILD INFO ::: generic_orc ::: GNU :::  -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os  -march=armv7-a -std=gnu99 -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -Wall 
+-- BUILD INFO ::: neon_hardfp_orc ::: GNU :::  -DNDEBUG -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os  -march=armv7-a -std=gnu99 -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -Wall -mfpu=neon -funsafe-math-optimizations -mfloat-abi=hard
+-- Compiler Version: arm-linux-gnueabihf-gcc (Linaro GCC 6.4-2017.08) 6.4.1 20170707
+Copyright (C) 2017 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+-- ---- Adding ASM files
+-- -- Detected neon architecture; enabling ASM
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32fc_32f_dot_prod_32fc_unrollasm.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32f_s32f_multiply_32f_neonasm.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_16i_max_star_horizontal_16i.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32fc_32f_dot_prod_32fc_a_neonasm.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32fc_x2_multiply_32fc_neonasm.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32f_x2_add_32f_neonasm.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32fc_32f_dot_prod_32fc_a_neonasmvmla.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32f_x2_dot_prod_32f_neonasm_opts.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32f_x2_dot_prod_32f_neonasm.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32fc_32f_dot_prod_32fc_a_neonpipeline.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32f_x2_add_32f_neonpipeline.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32fc_x2_dot_prod_32fc_neonasm.s
+-- Adding source file: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/asm/neon/volk_32fc_x2_dot_prod_32fc_neonasm_opttests.s
+-- The ASM compiler identification is GNU
+-- Found assembler: /home/sabooh/buildroot_try5/buildroot/output/host/bin/arm-linux-gnueabihf-gcc
+-- c flags: -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os  -march=armv7-a -std=gnu99 -fvisibility=hidden -Wsign-compare -Wall -Wno-uninitialized -Wall;
+-- asm flags: -mfpu=neon -g
+-- Loading version 1.3 into constants...
+CMake Warning at /usr/share/cmake-3.5/Modules/FindBoost.cmake:725 (message):
+  Imported targets not available for Boost version 106501
+Call Stack (most recent call first):
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:763 (_Boost_COMPONENT_DEPENDENCIES)
+  /usr/share/cmake-3.5/Modules/FindBoost.cmake:1332 (_Boost_MISSING_DEPENDENCIES)
+  volk/lib/CMakeLists.txt:594 (find_package)
+
+
+-- Boost version: 1.65.1
+-- Found the following Boost libraries:
+--   unit_test_framework
+-- Using install prefix: /usr
+-- 
+-- Configuring volk support...
+--   Enabling volk support.
+--   Override with -DENABLE_VOLK=ON/OFF
+--   Override with -DENABLE_INTERNAL_VOLK=ON/OFF
+-- ENABLE_GR_LOG set to ON.
+-- HAVE_LOG4CPP set to False.
+-- LOG4CPP_LIBRARIES set to .
+-- Found Sphinx: /usr/bin/sphinx-build  
+-- 
+-- Configuring doxygen support...
+--   Dependency DOXYGEN_FOUND = YES
+--   Enabling doxygen support.
+--   Override with -DENABLE_DOXYGEN=ON/OFF
+-- 
+-- Configuring sphinx support...
+--   Dependency SPHINX_FOUND = TRUE
+--   Enabling sphinx support.
+--   Override with -DENABLE_SPHINX=ON/OFF
+-- Looking for C++ include netdb.h
+-- Looking for C++ include netdb.h - found
+-- Looking for C++ include sys/time.h
+-- Looking for C++ include sys/time.h - found
+-- Looking for C++ include sys/types.h
+-- Looking for C++ include sys/types.h - found
+-- Looking for C++ include sys/select.h
+-- Looking for C++ include sys/select.h - found
+-- Looking for C++ include sys/socket.h
+-- Looking for C++ include sys/socket.h - found
+-- Looking for C++ include io.h
+-- Looking for C++ include io.h - not found
+-- Looking for C++ include sys/mman.h
+-- Looking for C++ include sys/mman.h - found
+-- Looking for C++ include sys/ipc.h
+-- Looking for C++ include sys/ipc.h - found
+-- Looking for C++ include sys/shm.h
+-- Looking for C++ include sys/shm.h - found
+-- Looking for C++ include signal.h
+-- Looking for C++ include signal.h - found
+-- Looking for C++ include netinet/in.h
+-- Looking for C++ include netinet/in.h - found
+-- Looking for C++ include arpa/inet.h
+-- Looking for C++ include arpa/inet.h - found
+-- Looking for C++ include byteswap.h
+-- Looking for C++ include byteswap.h - found
+-- Looking for C++ include linux/ppdev.h
+-- Looking for C++ include linux/ppdev.h - found
+-- Looking for C++ include dev/ppbus/ppi.h
+-- Looking for C++ include dev/ppbus/ppi.h - not found
+-- Looking for C++ include unistd.h
+-- Looking for C++ include unistd.h - found
+-- Looking for C++ include malloc.h
+-- Looking for C++ include malloc.h - found
+-- Performing Test HAVE_SNPRINTF
+-- Performing Test HAVE_SNPRINTF - Success
+-- Performing Test HAVE_SIGACTION
+-- Performing Test HAVE_SIGACTION - Success
+-- Performing Test HAVE_SELECT
+-- Performing Test HAVE_SELECT - Success
+-- Performing Test HAVE_SYSCONF
+-- Performing Test HAVE_SYSCONF - Success
+-- Performing Test HAVE_GETPAGESIZE
+-- Performing Test HAVE_GETPAGESIZE - Success
+-- Performing Test HAVE_SSLEEP
+-- Performing Test HAVE_SSLEEP - Failed
+-- Performing Test HAVE_NANOSLEEP
+-- Performing Test HAVE_NANOSLEEP - Success
+-- Performing Test HAVE_GETTIMEOFDAY
+-- Performing Test HAVE_GETTIMEOFDAY - Success
+-- Performing Test HAVE_VALLOC
+-- Performing Test HAVE_VALLOC - Success
+-- Performing Test HAVE_PTHREAD_SIGMASK
+-- Performing Test HAVE_PTHREAD_SIGMASK - Success
+-- Performing Test HAVE_CREATEFILEMAPPING
+-- Performing Test HAVE_CREATEFILEMAPPING - Failed
+-- Performing Test HAVE_SHM_OPEN
+-- Performing Test HAVE_SHM_OPEN - Success
+-- Performing Test HAVE_SINCOS
+-- Performing Test HAVE_SINCOS - Success
+-- Performing Test HAVE_SINCOSF
+-- Performing Test HAVE_SINCOSF - Success
+-- Performing Test HAVE_SINF
+-- Performing Test HAVE_SINF - Success
+-- Performing Test HAVE_COSF
+-- Performing Test HAVE_COSF - Success
+-- Performing Test HAVE_MMAP
+-- Performing Test HAVE_MMAP - Success
+-- Performing Test HAVE_PTHREAD_SETSCHEDPARAM
+-- Performing Test HAVE_PTHREAD_SETSCHEDPARAM - Success
+-- Performing Test HAVE_SCHED_SETSCHEDULER
+-- Performing Test HAVE_SCHED_SETSCHEDULER - Success
+-- 
+-- Configuring gnuradio-runtime support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_VOLK = ON
+--   Dependency PYTHONINTERP_FOUND = TRUE
+--   Enabling gnuradio-runtime support.
+--   Override with -DENABLE_GNURADIO_RUNTIME=ON/OFF
+-- 
+-- Configuring gr-ctrlport support...
+--   Dependency Boost_FOUND = 1
+--   Dependency SWIG_FOUND = TRUE
+--   Dependency SWIG_VERSION_CHECK = TRUE
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Enabling gr-ctrlport support.
+--   Override with -DENABLE_GR_CTRLPORT=ON/OFF
+-- Looking for C++ include sys/resource.h
+-- Looking for C++ include sys/resource.h - found
+-- Loading build date Tue, 16 Jan 2018 06:44:47 into constants...
+-- Loading version 3.7.11 into constants...
+-- Checking for module 'thrift'
+--   Package thrift was not found in the pkg-config search path.
+Perhaps you should add the directory containing `thrift.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'thrift', required by 'world', not found
+-- Binary 'thrift' not found.
+-- Looking for C++ include windows.h
+-- Looking for C++ include windows.h - not found
+-- TRY_SHM_VMCIRCBUF set to ON.
+-- Performing Test HAVE_WNO_UNUSED_BUT_SET_VARIABLE
+-- Performing Test HAVE_WNO_UNUSED_BUT_SET_VARIABLE - Success
+-- 
+-- Configuring gr-blocks support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Enabling gr-blocks support.
+--   Override with -DENABLE_GR_BLOCKS=ON/OFF
+-- Performing Test HAVE_RAND48
+-- Performing Test HAVE_RAND48 - Success
+-- 
+-- Python checking for python >= 2.5
+-- Python checking for python >= 2.5 - found
+-- 
+-- Python checking for Cheetah >= 2.0.0
+-- Python checking for Cheetah >= 2.0.0 - found
+-- 
+-- Python checking for lxml >= 1.3.6
+-- Python checking for lxml >= 1.3.6 - found
+-- 
+-- Python checking for pygtk >= 2.10.0
+-- Python checking for pygtk >= 2.10.0 - not found
+-- 
+-- Python checking for numpy
+-- Python checking for numpy - found
+-- 
+-- Configuring gnuradio-companion support...
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_PYTHON = ON
+--   Enabling gnuradio-companion support.
+--   Override with -DENABLE_GRC=ON/OFF
+-- Checking for module 'gsl >= 1.10'
+--   Found gsl , version 2.3
+-- Found GSL: gsl;gslcblas;m  
+-- 
+-- Configuring gr-fec support...
+--   Dependency ENABLE_VOLK = ON
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency GSL_FOUND = TRUE
+--   Enabling gr-fec support.
+--   Override with -DENABLE_GR_FEC=ON/OFF
+-- Checking for module 'fftw3f >= 3.0'
+--   Found fftw3f , version 3.3.6-pl2
+-- Found FFTW3F: /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/lib/libfftw3f.so  
+-- 
+-- Configuring gr-fft support...
+--   Dependency ENABLE_VOLK = ON
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency FFTW3F_FOUND = TRUE
+--   Enabling gr-fft support.
+--   Override with -DENABLE_GR_FFT=ON/OFF
+-- 
+-- Configuring gr-filter support...
+--   Dependency ENABLE_VOLK = ON
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FFT = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Enabling gr-filter support.
+--   Override with -DENABLE_GR_FILTER=ON/OFF
+-- 
+-- Configuring gr-analog support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_VOLK = ON
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FFT = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Enabling gr-analog support.
+--   Override with -DENABLE_GR_ANALOG=ON/OFF
+-- 
+-- Configuring gr-digital support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_VOLK = ON
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FFT = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Enabling gr-digital support.
+--   Override with -DENABLE_GR_DIGITAL=ON/OFF
+-- 
+-- Configuring gr-dtv support...
+--   Dependency Boost_FOUND = 1
+--   Dependency GSL_FOUND = TRUE
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency ENABLE_GR_FEC = ON
+--   Enabling gr-dtv support.
+--   Override with -DENABLE_GR_DTV=ON/OFF
+-- Performing Test SSE2_SUPPORTED
+-- Performing Test SSE2_SUPPORTED - Failed
+-- 
+-- Configuring gr-atsc support...
+--   Dependency Boost_FOUND = 1
+--   Dependency GSL_FOUND = TRUE
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FFT = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_FEC = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Enabling gr-atsc support.
+--   Override with -DENABLE_GR_ATSC=ON/OFF
+-- 
+-- Configuring gr-audio support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Enabling gr-audio support.
+--   Override with -DENABLE_GR_AUDIO=ON/OFF
+-- Checking for module 'alsa'
+--   Found alsa, version 1.1.4.1
+-- Found ALSA 1.1.4.1
+-- Checking for module 'jack'
+--   Package jack was not found in the pkg-config search path.
+Perhaps you should add the directory containing `jack.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'jack', required by 'world', not found
+-- Looking for C++ include AudioUnit/AudioUnit.h
+-- Looking for C++ include AudioUnit/AudioUnit.h - not found
+-- Looking for C++ include AudioToolbox/AudioToolbox.h
+-- Looking for C++ include AudioToolbox/AudioToolbox.h - not found
+-- Checking for module 'portaudio-2.0'
+--   Found portaudio-2.0, version 19
+-- Performing Test PORTAUDIO2_FOUND
+-- Performing Test PORTAUDIO2_FOUND - Success
+-- Found PORTAUDIO: /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include  
+-- Checking for module 'comedilib'
+--   Package comedilib was not found in the pkg-config search path.
+Perhaps you should add the directory containing `comedilib.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'comedilib', required by 'world', not found
+-- 
+-- Configuring gr-comedi support...
+--   Dependency COMEDI_FOUND = 
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Disabling gr-comedi support.
+--   Override with -DENABLE_GR_COMEDI=ON/OFF
+-- 
+-- Configuring gr-channels support...
+--   Dependency ENABLE_VOLK = ON
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_FFT = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Enabling gr-channels support.
+--   Override with -DENABLE_GR_CHANNELS=ON/OFF
+-- 
+-- Configuring gr-noaa support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Disabling gr-noaa support.
+--   Override with -DENABLE_GR_NOAA=ON/OFF
+-- 
+-- Configuring gr-pager support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Disabling gr-pager support.
+--   Override with -DENABLE_GR_PAGER=ON/OFF
+CMake Warning at /usr/share/cmake-3.5/Modules/FindQt4.cmake:626 (message):
+  /usr/bin/qmake-qt4 reported QT_INSTALL_LIBS as "/usr/lib/x86_64-linux-gnu"
+  but QtCore could not be found there.  Qt is NOT installed correctly for the
+  target build environment.
+Call Stack (most recent call first):
+  gr-qtgui/CMakeLists.txt:25 (find_package)
+
+
+-- 
+-- Python checking for PyQt4
+-- Python checking for PyQt4 - not found
+-- 
+-- Configuring gr-qtgui support...
+--   Dependency Boost_FOUND = 1
+--   Dependency QT4_FOUND = 
+--   Dependency QWT_FOUND = FALSE
+--   Dependency ENABLE_VOLK = ON
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FFT = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency PYTHONLIBS_FOUND = TRUE
+--   Disabling gr-qtgui support.
+--   Override with -DENABLE_GR_QTGUI=ON/OFF
+-- 
+-- Configuring gr-trellis support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_DIGITAL = ON
+--   Enabling gr-trellis support.
+--   Override with -DENABLE_GR_TRELLIS=ON/OFF
+-- Found UHD: /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/libuhd.so  
+-- 
+-- Configuring gr-uhd support...
+--   Dependency Boost_FOUND = 1
+--   Dependency UHD_FOUND = TRUE
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Enabling gr-uhd support.
+--   Override with -DENABLE_GR_UHD=ON/OFF
+--   UHD Version: 3.10.2.tmp
+-- 
+-- Configuring gr-utils support...
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_PYTHON = ON
+--   Enabling gr-utils support.
+--   Override with -DENABLE_GR_UTILS=ON/OFF
+-- Could NOT find SDL (missing:  SDL_LIBRARY SDL_INCLUDE_DIR) 
+-- 
+-- Configuring gr-video-sdl support...
+--   Dependency SDL_FOUND = FALSE
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Disabling gr-video-sdl support.
+--   Override with -DENABLE_GR_VIDEO_SDL=ON/OFF
+-- 
+-- Configuring gr-vocoder support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FFT = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Disabling gr-vocoder support.
+--   Override with -DENABLE_GR_VOCODER=ON/OFF
+-- Checking for module 'libusb-1.0'
+--   Found libusb-1.0, version 1.0.21
+-- Found libusb-1.0: /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/libusb-1.0, /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/lib/libusb-1.0.so
+-- 
+-- Configuring gr-fcd support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_AUDIO = ON
+--   Dependency LIBUSB_FOUND = TRUE
+--   Disabling gr-fcd support.
+--   Override with -DENABLE_GR_FCD=ON/OFF
+-- 
+-- Configuring gr-wavelet support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_BLOCKS = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Dependency GSL_FOUND = TRUE
+--   Disabling gr-wavelet support.
+--   Override with -DENABLE_GR_WAVELET=ON/OFF
+-- 
+-- Python checking for wx >= 2.8
+-- Python checking for wx >= 2.8 - not found
+-- 
+-- Python checking for numpy
+-- Python checking for numpy - found
+-- 
+-- Configuring gr-wxgui support...
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ENABLE_GR_FFT = ON
+--   Dependency ENABLE_GR_FILTER = ON
+--   Dependency ENABLE_GR_ANALOG = ON
+--   Dependency ENABLE_PYTHON = ON
+--   Disabling gr-wxgui support.
+--   Override with -DENABLE_GR_WXGUI=ON/OFF
+-- Checking for module 'libzmq'
+--   Package libzmq was not found in the pkg-config search path.
+Perhaps you should add the directory containing `libzmq.pc'
+to the PKG_CONFIG_PATH environment variable
+Package 'libzmq', required by 'world', not found
+-- Could NOT find ZEROMQ (missing:  ZEROMQ_LIBRARIES ZEROMQ_INCLUDE_DIRS) 
+-- 
+-- Configuring gr-zeromq support...
+--   Dependency Boost_FOUND = 1
+--   Dependency ENABLE_GNURADIO_RUNTIME = ON
+--   Dependency ZEROMQ_FOUND = FALSE
+--   Disabling gr-zeromq support.
+--   Override with -DENABLE_GR_ZEROMQ=ON/OFF
+-- 
+-- ######################################################
+-- # Gnuradio enabled components                         
+-- ######################################################
+--   * python-support
+--   * volk
+--   * doxygen
+--   * sphinx
+--   * gnuradio-runtime
+--   * gr-ctrlport
+--   * gr-blocks
+--   * gnuradio-companion
+--   * gr-fec
+--   * gr-fft
+--   * gr-filter
+--   * gr-analog
+--   * gr-digital
+--   * gr-dtv
+--   * gr-atsc
+--   * gr-audio
+--   * * alsa
+--   * * oss
+--   * * portaudio
+--   * gr-channels
+--   * gr-trellis
+--   * gr-uhd
+--   * gr-utils
+-- 
+-- ######################################################
+-- # Gnuradio disabled components                        
+-- ######################################################
+--   * testing-support
+--   * gr-comedi
+--   * gr-noaa
+--   * gr-pager
+--   * gr-qtgui
+--   * gr-video-sdl
+--   * gr-vocoder
+--   * gr-fcd
+--   * gr-wavelet
+--   * gr-wxgui
+--   * gr-zeromq
+-- 
+-- Using install prefix: /usr
+-- Building for version: 3.7.11 / 3.7.11
+-- Configuring done
+-- Generating done
+CMake Warning:
+  Manually-specified variables were not used by the project:
+
+    BUILD_DOC
+    BUILD_DOCS
+    BUILD_EXAMPLE
+    BUILD_EXAMPLES
+    BUILD_TESTING
+    BUILD_TESTS
+    ENABLE_PAGER
+
+
+-- Build files have been written to: /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/buildroot-build
+[7m>>> gnuradio 3.7.11 Building[27m
+PATH="/home/sabooh/buildroot_try5/buildroot/output/host/bin:/home/sabooh/buildroot_try5/buildroot/output/host/sbin:/home/sabooh/bin:/home/sabooh/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin"  /usr/bin/make   -C /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11//buildroot-build
+Scanning dependencies of target pmt_generated
+Scanning dependencies of target pygen_volk_python_volk_modtool_e3539
+Scanning dependencies of target filter_generated_includes
+Scanning dependencies of target pygen_volk_python_volk_modtool_ad12a
+Scanning dependencies of target blocks_generated_includes
+Scanning dependencies of target pygen_gnuradio_runtime_python_gnuradio_gr_4f467
+Scanning dependencies of target trellis_generated_includes
+Scanning dependencies of target pygen_gnuradio_runtime_python_gnuradio_ctrlport_63d33
+[  0%] Generating volk_machine_neon_hardfp_orc.c
+Scanning dependencies of target pygen_gnuradio_runtime_examples_mp_sched_db30f
+Scanning dependencies of target pygen_gnuradio_runtime_python_gnuradio_gru_cf5e5
+Scanning dependencies of target analog_generated_includes
+Scanning dependencies of target digital_generated_includes
+Scanning dependencies of target pygen_gnuradio_runtime_python_gnuradio_ctrlport_3b6eb
+Scanning dependencies of target pygen_gnuradio_runtime_python_pmt_eb8f8
+[  0%] Generating ../../include/pmt/pmt_serial_tags.h
+[  0%] Generating __init__.pyc, cfg.pyc, volk_modtool_generate.pyc
+[  1%] Shebangin volk_modtool
+[  1%] Shebangin affinity_set.py
+Scanning dependencies of target pygen_gnuradio_runtime_python_gnuradio_bf8e5
+[  1%] Generating abs_ss.h, abs_ii.h, abs_ff.h
+[  1%] Generating __init__.pyc, tag_utils.pyc, packet_utils.pyc, gateway.pyc, gr_threading.pyc, gr_threading_23.pyc, gr_threading_24.pyc, hier_block2.pyc, top_block.pyc, pubsub.pyc
+[  1%] Generating chunks_to_symbols_bf.h, chunks_to_symbols_bc.h, chunks_to_symbols_sf.h, chunks_to_symbols_sc.h, chunks_to_symbols_if.h, chunks_to_symbols_ic.h
+[  1%] Generating encoder_bb.h, encoder_bs.h, encoder_bi.h, encoder_ss.h, encoder_si.h, encoder_ii.h
+[  2%] Generating fir_filter_ccc.h, fir_filter_ccf.h, fir_filter_fcc.h, fir_filter_fff.h, fir_filter_fsf.h, fir_filter_scc.h
+[  2%] Generating gr-perf-monitorxc, gr-ctrlport-monitorc
+[  2%] Generating __init__.pyc, freqz.pyc, gnuplot_freqz.pyc, hexint.pyc, listmisc.pyc, mathmisc.pyc, msgq_runner.pyc, os_read_exactly.pyc, seq_with_cursor.pyc, socket_stuff.pyc, daemon.pyc
+[  2%] Generating noise_source_s.h, noise_source_i.h, noise_source_f.h, noise_source_c.h
+[  2%] Generating __init__.pyc, pmt_to_python.pyc
+[  2%] Generating __init__.pyc, GrDataPlotter.pyc, monitor.pyc, GNURadioControlPortClient.pyc, RPCConnection.pyc
+[  2%] Generating __init__.pyc, eng_notation.pyc, eng_option.pyc, eng_arg.pyc, gr_unittest.pyc, gr_xmlrunner.pyc
+[  2%] Generating add_ss.h, add_ii.h, add_cc.h
+[  2%] Generating pmt_unv_int.h, qa_pmt_unv.h, pmt_unv.cc, qa_pmt_unv.cc
+[  2%] Built target pygen_volk_python_volk_modtool_ad12a
+[  2%] Shebangin plot_flops.py
+[  2%] Generating freq_xlating_fir_filter_ccc.h, freq_xlating_fir_filter_ccf.h, freq_xlating_fir_filter_fcc.h, freq_xlating_fir_filter_fcf.h, freq_xlating_fir_filter_scf.h, freq_xlating_fir_filter_scc.h
+[  2%] Generating burst_shaper_cc.h, burst_shaper_ff.h
+[  2%] Generating __init__.pyo, cfg.pyo, volk_modtool_generate.pyo
+[  2%] Generating fastnoise_source_s.h, fastnoise_source_i.h, fastnoise_source_f.h, fastnoise_source_c.h
+[  2%] Generating __init__.pyo, freqz.pyo, gnuplot_freqz.pyo, hexint.pyo, listmisc.pyo, mathmisc.pyo, msgq_runner.pyo, os_read_exactly.pyo, seq_with_cursor.pyo, socket_stuff.pyo, daemon.pyo
+[  2%] Generating __init__.pyo, GrDataPlotter.pyo, monitor.pyo, GNURadioControlPortClient.pyo, RPCConnection.pyo
+[  2%] Generating gr-perf-monitorxo, gr-ctrlport-monitoro
+[  2%] Generating __init__.pyo, tag_utils.pyo, packet_utils.pyo, gateway.pyo, gr_threading.pyo, gr_threading_23.pyo, gr_threading_24.pyo, hier_block2.pyo, top_block.pyo, pubsub.pyo
+[  2%] Generating add_const_vbb.h, add_const_vss.h, add_const_vii.h, add_const_vff.h, add_const_vcc.h
+Scanning dependencies of target pygen_gnuradio_runtime_examples_network_d4a64
+[  2%] Generating sccc_encoder_bb.h, sccc_encoder_bs.h, sccc_encoder_bi.h, sccc_encoder_ss.h, sccc_encoder_si.h, sccc_encoder_ii.h
+[  2%] Generating __init__.pyo, eng_notation.pyo, eng_option.pyo, eng_arg.pyo, gr_unittest.pyo, gr_xmlrunner.pyo
+[  2%] Generating __init__.pyo, pmt_to_python.pyo
+[  2%] Shebangin run_synthetic.py
+[  2%] Generating sig_source_s.h, sig_source_i.h, sig_source_f.h, sig_source_c.h
+[  2%] Generating interp_fir_filter_ccc.h, interp_fir_filter_ccf.h, interp_fir_filter_fcc.h, interp_fir_filter_fff.h, interp_fir_filter_fsf.h, interp_fir_filter_scc.h
+[  2%] Shebangin audio_sink.py
+[  2%] Generating pccc_encoder_bb.h, pccc_encoder_bs.h, pccc_encoder_bi.h, pccc_encoder_ss.h, pccc_encoder_si.h, pccc_encoder_ii.h
+[  2%] Built target pmt_generated
+[  2%] Generating rational_resampler_base_ccc.h, rational_resampler_base_ccf.h, rational_resampler_base_fcc.h, rational_resampler_base_fff.h, rational_resampler_base_fsf.h, rational_resampler_base_scc.h
+[  2%] Generating and_bb.h, and_ss.h, and_ii.h
+[  2%] Shebangin audio_source.py
+Scanning dependencies of target pygen_gnuradio_runtime_examples_volk_benchmark_ed6ea
+[  2%] Generating random_uniform_source_b.h, random_uniform_source_s.h, random_uniform_source_i.h
+[  2%] Built target pygen_gnuradio_runtime_python_gnuradio_ctrlport_63d33
+[  2%] Shebangin synthetic.py
+[  2%] Built target digital_generated_includes
+[  2%] Built target pygen_gnuradio_runtime_python_pmt_eb8f8
+[  2%] Generating metrics_s.h, metrics_i.h, metrics_f.h, metrics_c.h
+[  2%] Built target pygen_volk_python_volk_modtool_e3539
+[  2%] Shebangin volk_math.py
+[  2%] Generating and_const_bb.h, and_const_ss.h, and_const_ii.h
+Scanning dependencies of target pygen_gr_blocks_python_grc_gnuradio_2a581
+[  2%] Shebangin wfm_rcv_pll_to_wav.py
+Scanning dependencies of target pygen_gr_blocks_python_grc_gnuradio_8b2e8
+[  2%] Shebangin dial_tone_sink.py
+Scanning dependencies of target pygen_gr_blocks_swig_64263
+Scanning dependencies of target pygen_gr_blocks_python_blocks_6c83c
+[  2%] Generating argmax_fs.h, argmax_is.h, argmax_ss.h
+[  3%] Generating blocks_swig.pyc
+[  3%] Generating viterbi_b.h, viterbi_s.h, viterbi_i.h
+[  3%] Generating __init__.pyc
+[  3%] Generating __init__.pyc, parse_file_metadata.pyc, stream_to_vector_decimator.pyc
+[  3%] Shebangin volk_plot.py
+[  3%] Generating blks2/__init__.pyc, blks2/error_rate.pyc, blks2/selector.pyc, blks2/tcp.pyc
+[  3%] Built target pygen_gnuradio_runtime_python_gnuradio_ctrlport_3b6eb
+[  3%] Built target pygen_gnuradio_runtime_examples_mp_sched_db30f
+[  3%] Shebangin dial_tone_source.py
+[  3%] Generating __init__.pyo
+[  4%] Shebangin volk_test_funcs.py
+Scanning dependencies of target pygen_gr_blocks_examples_tags_ab71e
+[  5%] Generating viterbi_combined_sb.h, viterbi_combined_ss.h, viterbi_combined_si.h, viterbi_combined_ib.h, viterbi_combined_is.h, viterbi_combined_ii.h, viterbi_combined_fb.h, viterbi_combined_fs.h, viterbi_combined_fi.h, viterbi_combined_cb.h, viterbi_combined_cs.h, viterbi_combined_ci.h
+[  5%] Generating blks2/__init__.pyo, blks2/error_rate.pyo, blks2/selector.pyo, blks2/tcp.pyo
+Scanning dependencies of target pygen_gr_blocks_examples_ctrlport_85c1f
+[  5%] Shebangin vector_sink.py
+[  5%] Generating divide_ss.h, divide_ii.h, divide_ff.h, divide_cc.h
+[  5%] Built target pygen_gnuradio_runtime_python_gnuradio_bf8e5
+[  5%] Shebangin simple_copy_controller.py
+[  5%] Generating blocks_swig.pyo
+[  5%] Generating __init__.pyo, parse_file_metadata.pyo, stream_to_vector_decimator.pyo
+[  5%] Built target pygen_gr_blocks_python_grc_gnuradio_2a581
+[  5%] Shebangin volk_types.py
+[  5%] Shebangin test_file_tags.py
+[  5%] Shebangin vector_source.py
+[  5%] Generating integrate_ss.h, integrate_ii.h, integrate_ff.h, integrate_cc.h
+[  5%] Generating sccc_decoder_b.h, sccc_decoder_s.h, sccc_decoder_i.h
+[  5%] Shebangin usrp_source_controller.py
+Scanning dependencies of target pygen_grc_e9654
+[  5%] Generating main.pyc, __main__.pyc, __init__.pyc
+[  5%] Built target pygen_gr_blocks_swig_64263
+[  5%] Built target pygen_gr_blocks_examples_tags_ab71e
+[  5%] Built target pygen_gnuradio_runtime_examples_volk_benchmark_ed6ea
+[  5%] Built target pygen_gr_blocks_examples_ctrlport_85c1f
+[  5%] Built target analog_generated_includes
+[  5%] Generating main.pyo, __main__.pyo, __init__.pyo
+[  6%] Generating max_ss.h, max_ii.h, max_ff.h
+[  6%] Generating pccc_decoder_b.h, pccc_decoder_s.h, pccc_decoder_i.h
+[  6%] Built target pygen_gnuradio_runtime_python_gnuradio_gru_cf5e5
+[  6%] Generating volk_32f_x2_divide_32f_a_orc_impl.c
+[  6%] Generating pccc_decoder_combined_fb.h, pccc_decoder_combined_fs.h, pccc_decoder_combined_fi.h, pccc_decoder_combined_cb.h, pccc_decoder_combined_cs.h, pccc_decoder_combined_ci.h
+[  6%] Generating volk_32fc_s32f_magnitude_16i_a_orc_impl.c
+[  6%] Generating min_ss.h, min_ii.h, min_ff.h
+[  6%] Built target pygen_gnuradio_runtime_examples_network_d4a64
+[  6%] Built target pygen_gnuradio_runtime_python_gnuradio_gr_4f467
+[  6%] Generating volk_16ic_deinterleave_16i_x2_a_orc_impl.c
+[  6%] Generating volk_32i_x2_and_32i_a_orc_impl.c
+[  6%] Generating multiply_ss.h, multiply_ii.h
+[  6%] Generating volk_32i_x2_or_32i_a_orc_impl.c
+[  6%] Generating sccc_decoder_combined_fb.h, sccc_decoder_combined_fs.h, sccc_decoder_combined_fi.h, sccc_decoder_combined_cb.h, sccc_decoder_combined_cs.h, sccc_decoder_combined_ci.h
+[  6%] Built target pygen_gr_blocks_python_blocks_6c83c
+[  6%] Generating moving_average_ss.h, moving_average_ii.h, moving_average_ff.h, moving_average_cc.h
+Scanning dependencies of target grc_generated_xml
+[  6%] Generating multiply_const_ss.h, multiply_const_ii.h
+[  6%] Built target filter_generated_includes
+[  6%] Built target pygen_gr_blocks_python_grc_gnuradio_8b2e8
+[  6%] Generating multiply_const_vss.h, multiply_const_vii.h
+[  6%] Generating volk_16ic_magnitude_16i_a_orc_impl.c
+[  6%] Built target pygen_grc_e9654
+Scanning dependencies of target pygen_grc_core_ce8b8
+[  7%] Generating volk_32f_x2_max_32f_a_orc_impl.c
+[  7%] Generating multiply_matrix_ff.h, multiply_matrix_cc.h
+Scanning dependencies of target pygen_grc_gui_74f77
+[  7%] Generating volk_16ic_s32f_deinterleave_32f_x2_a_orc_impl.c
+[  7%] Generating mute_ss.h, mute_ii.h, mute_ff.h, mute_cc.h
+[  7%] Generating variable_struct.xml
+Scanning dependencies of target pygen_grc_core_generator_17547
+[  7%] Generating volk_32f_s32f_normalize_a_orc_impl.c
+[  7%] Generating volk_32f_s32f_multiply_32f_a_orc_impl.c
+[  7%] Generating or_bb.h, or_ss.h, or_ii.h
+[  7%] Generating not_bb.h, not_ss.h, not_ii.h
+Scanning dependencies of target pygen_grc_core_utils_102df
+[  7%] Generating Platform.pyc, FlowGraph.pyc, Connection.pyc, Element.pyc, __init__.pyc, Config.pyc, ParseXML.pyc, Block.pyc, Messages.pyc, Param.pyc, Port.pyc, Constants.pyc
+[  7%] Generating probe_signal_b.h, probe_signal_s.h, probe_signal_i.h, probe_signal_f.h, probe_signal_c.h
+[  7%] Generating PropsDialog.pyc, Platform.pyc, Executor.pyc, FlowGraph.pyc, BlockTreeWindow.pyc, Dialogs.pyc, Preferences.pyc, NotebookPage.pyc, DrawingArea.pyc, ActionHandler.pyc, StateCache.pyc, Connection.pyc, Bars.pyc, Element.pyc, VariableEditor.pyc, MainWindow.pyc, __init__.pyc, ParserErrorsDialog.pyc, Colors.pyc, Actions.pyc, Config.pyc, Block.pyc, Utils.pyc, Param.pyc, Port.pyc, FileDialogs.pyc, external_editor.pyc, Constants.pyc
+[  7%] Generating peak_detector_fb.h, peak_detector_ib.h, peak_detector_sb.h
+[  7%] Generating volk_32f_x2_multiply_32f_a_orc_impl.c
+[  7%] Generating probe_signal_vb.h, probe_signal_vs.h, probe_signal_vi.h, probe_signal_vf.h, probe_signal_vc.h
+[  7%] Generating __init__.pyc, FlowGraphProxy.pyc, Generator.pyc
+[  7%] Generating volk_32f_x2_add_32f_a_orc_impl.c
+[  7%] Generating Platform.pyo, FlowGraph.pyo, Connection.pyo, Element.pyo, __init__.pyo, Config.pyo, ParseXML.pyo, Block.pyo, Messages.pyo, Param.pyo, Port.pyo, Constants.pyo
+[  7%] Built target grc_generated_xml
+[  7%] Generating sample_and_hold_bb.h, sample_and_hold_ss.h, sample_and_hold_ii.h, sample_and_hold_ff.h
+[  7%] Generating expr_utils.pyc, epy_block_io.pyc, extract_docs.pyc, odict.pyc, __init__.pyc, complexity.pyc
+[  7%] Generating volk_32f_sqrt_32f_a_orc_impl.c
+[  7%] Generating sub_ss.h, sub_ii.h, sub_cc.h
+Scanning dependencies of target pygen_grc_scripts_4a028
+[  8%] Generating tsb_vector_sink_b.h, tsb_vector_sink_s.h, tsb_vector_sink_i.h, tsb_vector_sink_f.h, tsb_vector_sink_c.h
+[  8%] Generating volk_8i_convert_16i_a_orc_impl.c
+[  8%] Generating volk_16ic_deinterleave_real_8i_a_orc_impl.c
+[  8%] Shebangin gnuradio-companion
+[  8%] Generating packed_to_unpacked_bb.h, packed_to_unpacked_ss.h, packed_to_unpacked_ii.h
+[  8%] Generating __init__.pyo, FlowGraphProxy.pyo, Generator.pyo
+[  8%] Generating xor_bb.h, xor_ss.h, xor_ii.h
+[  8%] Generating unpacked_to_packed_bb.h, unpacked_to_packed_ss.h, unpacked_to_packed_ii.h
+[  8%] Generating vector_insert_b.h, vector_insert_s.h, vector_insert_i.h, vector_insert_f.h, vector_insert_c.h
+[  8%] Generating volk_32f_x2_dot_prod_32f_a_orc_impl.c
+[  8%] Generating vector_sink_b.h, vector_sink_s.h, vector_sink_i.h, vector_sink_f.h, vector_sink_c.h
+[  8%] Generating volk_32fc_x2_multiply_32fc_a_orc_impl.c
+[  8%] Generating volk_8i_s32f_convert_32f_a_orc_impl.c
+[  8%] Generating expr_utils.pyo, epy_block_io.pyo, extract_docs.pyo, odict.pyo, __init__.pyo, complexity.pyo
+[  8%] Built target pygen_grc_scripts_4a028
+[  8%] Generating volk_32fc_magnitude_32f_a_orc_impl.c
+[  8%] Generating PropsDialog.pyo, Platform.pyo, Executor.pyo, FlowGraph.pyo, BlockTreeWindow.pyo, Dialogs.pyo, Preferences.pyo, NotebookPage.pyo, DrawingArea.pyo, ActionHandler.pyo, StateCache.pyo, Connection.pyo, Bars.pyo, Element.pyo, VariableEditor.pyo, MainWindow.pyo, __init__.pyo, ParserErrorsDialog.pyo, Colors.pyo, Actions.pyo, Config.pyo, Block.pyo, Utils.pyo, Param.pyo, Port.pyo, FileDialogs.pyo, external_editor.pyo, Constants.pyo
+[  8%] Generating vector_source_b.h, vector_source_s.h, vector_source_i.h, vector_source_f.h, vector_source_c.h
+[  8%] Generating volk_32fc_32f_multiply_32fc_a_orc_impl.c
+Scanning dependencies of target pygen_gr_fec_python_fec_8b140
+[  8%] Generating volk_32f_x2_subtract_32f_a_orc_impl.c
+[  9%] Generating volk_32fc_s32fc_multiply_32fc_a_orc_impl.c
+[  9%] Generating volk_32f_x2_min_32f_a_orc_impl.c
+[  9%] Generating volk_16sc_magnitude_32f_aligned16_orc_impl.c
+[  9%] Generating __init__.pyc, bitflip.pyc, extended_encoder.pyc, extended_decoder.pyc, capillary_threaded_decoder.pyc, capillary_threaded_encoder.pyc, threaded_decoder.pyc, threaded_encoder.pyc, extended_async_encoder.pyc, extended_tagged_encoder.pyc, extended_tagged_decoder.pyc, fec_test.pyc, bercurve_generator.pyc
+[  9%] Generating volk_16u_byteswap_a_orc_impl.c
+[  9%] Built target pygen_grc_core_generator_17547
+[  9%] Generating ../include/volk/volk.h
+[  9%] Generating volk.c
+[  9%] Generating ../include/volk/volk_typedefs.h
+Scanning dependencies of target pygen_gr_fec_python_fec_polar_f667e
+[  9%] Shebangin polar_channel_construction
+[  9%] Generating __init__.pyo, bitflip.pyo, extended_encoder.pyo, extended_decoder.pyo, capillary_threaded_decoder.pyo, capillary_threaded_encoder.pyo, threaded_decoder.pyo, threaded_encoder.pyo, extended_async_encoder.pyo, extended_tagged_encoder.pyo, extended_tagged_decoder.pyo, fec_test.pyo, bercurve_generator.pyo
+[  9%] Built target pygen_gr_fec_python_fec_polar_f667e
+[  9%] Built target pygen_grc_core_ce8b8
+Scanning dependencies of target pygen_gr_fec_python_fec_LDPC_5a8e9
+Scanning dependencies of target pygen_gr_fft_python_fft_40ce4
+Scanning dependencies of target pygen_gr_fec_python_fec_polar_f8ed5
+[  9%] Built target pygen_grc_core_utils_102df
+[  9%] Generating __init__.pyc, Generate_LDPC_matrix_functions.pyc, Generate_LDPC_matrix.pyc
+[  9%] Generating __init__.pyc, channel_construction.pyc, channel_construction_awgn.pyc, channel_construction_bec.pyc, helper_functions.pyc
+[  9%] Generating __init__.pyc, logpwrfft.pyc
+[  9%] Generating __init__.pyo, channel_construction.pyo, channel_construction_awgn.pyo, channel_construction_bec.pyo, helper_functions.pyo
+Scanning dependencies of target pygen_gr_filter_python_filter_4deec
+[  9%] Generating __init__.pyo, Generate_LDPC_matrix_functions.pyo, Generate_LDPC_matrix.pyo
+[  9%] Generating __init__.pyc, filterbank.pyc, freq_xlating_fft_filter.pyc, optfir.pyc, pfb.pyc, rational_resampler.pyc
+[  9%] Built target blocks_generated_includes
+[  9%] Generating __init__.pyo, filterbank.pyo, freq_xlating_fft_filter.pyo, optfir.pyo, pfb.pyo, rational_resampler.pyo
+[  9%] Built target trellis_generated_includes
+Scanning dependencies of target pygen_gr_filter_python_filter_design_b4ac8
+[  9%] Generating __init__.pyo, logpwrfft.pyo
+Scanning dependencies of target pygen_gr_filter_python_filter_gui_af034
+[  9%] Generating api_object.pyc, filter_design.pyc, fir_design.pyc
+Scanning dependencies of target pygen_gr_filter_apps_d4cbd
+[  9%] Generating api_object.pyo, filter_design.pyo, fir_design.pyo
+[  9%] Built target pygen_gr_fec_python_fec_polar_f8ed5
+[  9%] Generating bandgraphicsview.pyc, banditems.pyc, icons_rc.pyc, idealbanditems.pyc, polezero_plot.pyc, pyqt_filter_stacked.pyc
+[  9%] Built target pygen_gr_fft_python_fft_40ce4
+[  9%] Built target pygen_gr_fec_python_fec_LDPC_5a8e9
+Scanning dependencies of target pygen_gr_analog_python_analog_acb04
+Scanning dependencies of target pygen_gr_filter_examples_1ab0b
+[  9%] Shebangin gr_filter_design
+Scanning dependencies of target pygen_gr_analog_examples_8e75b
+[  9%] Generating __init__.pyc, am_demod.pyc, fm_demod.pyc, fm_emph.pyc, nbfm_rx.pyc, nbfm_tx.pyc, standard_squelch.pyc, wfm_rcv.pyc, wfm_rcv_fmdet.pyc, wfm_rcv_pll.pyc, wfm_tx.pyc
+[  9%] Built target pygen_gr_fec_python_fec_8b140
+Scanning dependencies of target pygen_gr_analog_examples_tags_4ece1
+[  9%] Shebangin fmtest.py
+[  9%] Shebangin channelize.py
+[  9%] Generating ../include/volk/volk_cpu.h
+[  9%] Built target pygen_gr_filter_apps_d4cbd
+[  9%] Generating __init__.pyo, am_demod.pyo, fm_demod.pyo, fm_emph.pyo, nbfm_rx.pyo, nbfm_tx.pyo, standard_squelch.pyo, wfm_rcv.pyo, wfm_rcv_fmdet.pyo, wfm_rcv_pll.pyo, wfm_tx.pyo
+[  9%] Shebangin uhd_burst_detector.py
+Scanning dependencies of target pygen_gr_digital_python_digital_abe6f
+[  9%] Built target pygen_gr_filter_python_filter_design_b4ac8
+[  9%] Generating bandgraphicsview.pyo, banditems.pyo, icons_rc.pyo, idealbanditems.pyo, polezero_plot.pyo, pyqt_filter_stacked.pyo
+[  9%] Shebangin chirp_channelize.py
+[  9%] Built target pygen_gr_filter_python_filter_4deec
+[  9%] Generating volk_cpu.c
+Scanning dependencies of target pygen_gr_digital_swig_4e3e8
+[  9%] Generating ../include/volk/volk_config_fixed.h
+Scanning dependencies of target pygen_gr_digital_python_grc_gnuradio_fc07c
+Scanning dependencies of target pygen_gr_digital_python_digital_0fa2e
+[  9%] Generating utils/__init__.pyc, utils/gray_code.pyc, utils/mod_codes.pyc, utils/alignment.pyc, utils/tagged_streams.pyc
+[  9%] Built target pygen_gr_analog_examples_8e75b
+[  9%] Generating blks2/packet.pyc
+[  9%] Built target pygen_gr_analog_examples_tags_4ece1
+[  9%] Generating digital_swig.pyc
+Scanning dependencies of target pygen_gr_digital_examples_aa798
+[  9%] Shebangin decimate.py
+Scanning dependencies of target pygen_gr_digital_examples_ef4ff
+[  9%] Shebangin example_costas.py
+[  9%] Generating utils/__init__.pyo, utils/gray_code.pyo, utils/mod_codes.pyo, utils/alignment.pyo, utils/tagged_streams.pyo
+[  9%] Generating digital_swig.pyo
+[  9%] Built target pygen_grc_gui_74f77
+[  9%] Generating __init__.pyc, bpsk.pyc, constellation_map_generator.pyc, cpm.pyc, crc.pyc, generic_mod_demod.pyc, gmsk.pyc, gfsk.pyc, modulation_utils.pyc, ofdm.pyc, ofdm_packet_utils.pyc, ofdm_receiver.pyc, ofdm_sync_fixed.pyc, ofdm_sync_ml.pyc, ofdm_sync_pnac.pyc, ofdm_sync_pn.pyc, ofdm_txrx.pyc, packet_utils.pyc, pkt.pyc, psk.pyc, psk_constellations.pyc, qam.pyc, qamlike.pyc, qam_constellations.pyc, qpsk.pyc, soft_dec_lut_gen.pyc
+[  9%] Shebangin transmit_path.py
+Scanning dependencies of target pygen_gr_digital_examples_bda02
+[  9%] Shebangin fft_filter_ccc.py
+[  9%] Shebangin receive_path.py
+[  9%] Shebangin uhd_interface.py
+[  9%] Shebangin example_fll.py
+[  9%] Built target pygen_gr_digital_swig_4e3e8
+[  9%] Shebangin benchmark_add_channel.py
+[  9%] Shebangin benchmark_tx.py
+[  9%] Shebangin benchmark_rx.py
+[  9%] Shebangin fir_filter_ccc.py
+[  9%] Generating blks2/packet.pyo
+[  9%] Built target pygen_gr_analog_python_analog_acb04
+Scanning dependencies of target pygen_gr_dtv_python_dtv_5e295
+[  9%] Built target pygen_gr_filter_python_filter_gui_af034
+[ 10%] Generating __init__.pyo, bpsk.pyo, constellation_map_generator.pyo, cpm.pyo, crc.pyo, generic_mod_demod.pyo, gmsk.pyo, gfsk.pyo, modulation_utils.pyo, ofdm.pyo, ofdm_packet_utils.pyo, ofdm_receiver.pyo, ofdm_sync_fixed.pyo, ofdm_sync_ml.pyo, ofdm_sync_pnac.pyo, ofdm_sync_pn.pyo, ofdm_txrx.pyo, packet_utils.pyo, pkt.pyo, psk.pyo, psk_constellations.pyo, qam.pyo, qamlike.pyo, qam_constellations.pyo, qpsk.pyo, soft_dec_lut_gen.pyo
+[ 10%] Shebangin tx_voice.py
+Scanning dependencies of target pygen_gr_dtv_examples_77891
+[ 10%] Shebangin benchmark_rx.py
+[ 10%] Shebangin fir_filter_fff.py
+[ 10%] Generating __init__.pyc, atsc_rx.pyc, atsc_rx_filter.pyc
+[ 10%] Shebangin example_timing.py
+[ 10%] Shebangin rx_voice.py
+[ 10%] Built target pygen_gr_digital_python_grc_gnuradio_fc07c
+Scanning dependencies of target pygen_gr_dtv_apps_588ab
+[ 10%] Shebangin digital_bert_rx.py
+Scanning dependencies of target pygen_gr_atsc_python_atsc_33c59
+Scanning dependencies of target pygen_gr_atsc_python_atsc_f3743
+[ 11%] Shebangin atsc_ctrlport_monitor.py
+[ 11%] Built target pygen_gr_dtv_apps_588ab
+[ 11%] Shebangin atsc_rx.py
+[ 11%] Generating __init__.pyc, atsc_utils.pyc
+[ 11%] Shebangin benchmark_tx.py
+[ 11%] Shebangin digital_bert_tx.py
+[ 11%] Shebangin run_length.py
+[ 12%] Shebangin tunnel.py
+[ 12%] Built target pygen_gr_dtv_examples_77891
+Scanning dependencies of target pygen_gr_audio_python_audio_13488
+[ 12%] Shebangin interpolate.py
+[ 12%] Generating __init__.pyo, atsc_rx.pyo, atsc_rx_filter.pyo
+[ 12%] Shebangin reconstruction.py
+[ 12%] Built target pygen_gr_atsc_python_atsc_33c59
+Scanning dependencies of target pygen_gr_audio_examples_python_1b962
+[ 12%] Shebangin gr_plot_ofdm.py
+Scanning dependencies of target pygen_gr_channels_python_channels_3dd2d
+[ 12%] Shebangin audio_copy.py
+[ 12%] Generating __init__.pyc
+[ 12%] Built target pygen_gr_digital_python_digital_abe6f
+[ 12%] Shebangin gen_whitener.py
+[ 12%] Generating __init__.pyo, atsc_utils.pyo
+[ 12%] Shebangin resampler.py
+Scanning dependencies of target gr_trellis_xml
+[ 13%] Shebangin synth_filter.py
+[ 13%] Built target pygen_gr_digital_examples_aa798
+[ 13%] Generating __init__.pyc, amp_bal.pyc, conj_fs_iqcorr.pyc, distortion_2_gen.pyc, distortion_3_gen.pyc, impairments.pyc, iqbal_gen.pyc, phase_bal.pyc, phase_noise_gen.pyc, quantizer.pyc
+Scanning dependencies of target pygen_gr_trellis_swig_f6bc3
+[ 13%] Generating volk_machines.h
+[ 13%] Shebangin receive_path.py
+[ 14%] Generating __init__.pyo
+[ 14%] Shebangin audio_fft.py
+Scanning dependencies of target pygen_gr_trellis_python_trellis_7dec2
+[ 14%] Shebangin snr_estimators.py
+[ 14%] Shebangin synth_to_chan.py
+[ 14%] Shebangin gr_filtdes_api.py
+[ 14%] Generating trellis_swig.pyc
+[ 14%] Generating __init__.pyc, fsm_utils.pyc
+[ 14%] Generating test_tcm.py.xml
+[ 14%] Built target pygen_gr_dtv_python_dtv_5e295
+[ 14%] Shebangin audio_play.py
+[ 14%] Shebangin transmit_path.py
+[ 14%] Built target pygen_gr_digital_examples_ef4ff
+[ 14%] Generating volk_machines.c
+[ 14%] Generating __init__.pyo, amp_bal.pyo, conj_fs_iqcorr.pyo, distortion_2_gen.pyo, distortion_3_gen.pyo, impairments.pyo, iqbal_gen.pyo, phase_bal.pyo, phase_noise_gen.pyo, quantizer.pyo
+[ 14%] Built target pygen_gr_atsc_python_atsc_f3743
+[ 14%] Shebangin gr_filtdes_callback.py
+[ 14%] Generating test_viterbi_equalization1.py.xml
+[ 14%] Built target pygen_gr_audio_python_audio_13488
+[ 14%] Generating volk_machine_generic_orc.c
+[ 14%] Shebangin gr_filtdes_restrict.py
+[ 14%] Generating __init__.pyo, fsm_utils.pyo
+Scanning dependencies of target pygen_gr_uhd_python_uhd_198ee
+Scanning dependencies of target uhd_grc_xml_blocks
+Scanning dependencies of target pygen_gr_trellis_examples_python_a755d
+[ 14%] Generating trellis_swig.pyo
+[ 14%] Shebangin audio_to_file.py
+Scanning dependencies of target pygen_gr_uhd_apps_2bba7
+[ 14%] Shebangin tunnel.py
+[ 15%] Shebangin test_tcm.py
+[ 15%] Generating __init__.pyc
+[ 15%] Built target gr_trellis_xml
+[ 15%] Generating uhd_usrp_source.xml
+[ 15%] Shebangin gr_filtdes_live_upd.py
+[ 15%] Shebangin dial_tone.py
+Scanning dependencies of target pygen_gr_uhd_apps_6b0b2
+[ 15%] Shebangin radio.py
+Scanning dependencies of target pygen_gr_uhd_apps_75298
+[ 15%] Built target pygen_gr_trellis_swig_f6bc3
+[ 15%] Shebangin test_cpm.py
+[ 15%] Shebangin uhd_interface.py
+[ 15%] Generating __init__.pyo
+[ 15%] Shebangin input.py
+[ 15%] Generating uhd_siggen_base.pyc, uhd_app.pyc
+Scanning dependencies of target pygen_gr_uhd_apps_62ac1
+[ 15%] Built target pygen_gr_filter_examples_1ab0b
+[ 15%] Built target pygen_gr_trellis_python_trellis_7dec2
+[ 15%] Shebangin ui.py
+[ 15%] Shebangin dial_tone_daemon.py
+[ 15%] Built target pygen_gr_uhd_python_uhd_198ee
+Scanning dependencies of target pygen_gr_uhd_examples_python_0fa0e
+[ 15%] Built target pygen_gr_trellis_examples_python_a755d
+[ 15%] Shebangin hfx.py
+[ 15%] Built target pygen_gr_digital_examples_bda02
+[ 16%] Shebangin output.py
+[ 16%] Generating uhd_siggen_base.pyo, uhd_app.pyo
+Scanning dependencies of target pygen_gr_uhd_apps_b5805
+Scanning dependencies of target pygen_gr_utils_python_utils_c1b8f
+Scanning dependencies of target pygen_gr_utils_python_modtool_bf834
+[ 16%] Shebangin fm_tx4.py
+[ 16%] Built target pygen_gr_uhd_apps_62ac1
+[ 16%] Built target pygen_gr_uhd_apps_2bba7
+Scanning dependencies of target pygen_gr_utils_python_utils_2cdf0
+[ 16%] Generating __init__.pyc, cmakefile_editor.pyc, code_generator.pyc, grc_xml_generator.pyc, modtool_add.pyc, modtool_base.pyc, modtool_disable.pyc, modtool_help.pyc, modtool_info.pyc, modtool_makexml.pyc, modtool_newmod.pyc, modtool_rm.pyc, modtool_rename.pyc, parser_cc_block.pyc, scm.pyc, templates.pyc, util_functions.pyc
+[ 16%] Shebangin ssbagc.py
+[ 16%] Shebangin uhd_fft
+[ 16%] Shebangin gr_modtool
+[ 16%] Shebangin dial_tone_wav.py
+Scanning dependencies of target doxygen_target
+Scanning dependencies of target gnuradio-pmt
+[ 16%] Generating plot_data.pyc, plot_fft_base.pyc, plot_psd_base.pyc, pyqt_plot.pyc, pyqt_filter.pyc
+[ 16%] Shebangin fm_tx_2_daughterboards.py
+[ 17%] Generating uhd_usrp_sink.xml
+[ 17%] Generating __init__.pyo, cmakefile_editor.pyo, code_generator.pyo, grc_xml_generator.pyo, modtool_add.pyo, modtool_base.pyo, modtool_disable.pyo, modtool_help.pyo, modtool_info.pyo, modtool_makexml.pyo, modtool_newmod.pyo, modtool_rm.pyo, modtool_rename.pyo, parser_cc_block.pyo, scm.pyo, templates.pyo, util_functions.pyo
+[ 17%] Generating documentation with doxygen
+[ 17%] Building CXX object gnuradio-runtime/lib/pmt/CMakeFiles/gnuradio-pmt.dir/pmt_unv.cc.o
+[ 17%] Shebangin ssbdemod.py
+[ 17%] Built target pygen_gr_uhd_apps_75298
+[ 17%] Shebangin gr_plot_char
+[ 17%] Shebangin uhd_rx_cfile
+[ 17%] Shebangin mono_tone.py
+[ 17%] Generating plot_data.pyo, plot_fft_base.pyo, plot_psd_base.pyo, pyqt_plot.pyo, pyqt_filter.pyo
+[ 17%] Shebangin max_power.py
+[ 17%] Shebangin multi_tone.py
+[ 17%] Shebangin gr_plot_const
+[ 17%] Shebangin startup.py
+[ 17%] Shebangin gr_plot_fft
+[ 17%] Shebangin usrp_am_mw_rcv.py
+[ 17%] Shebangin noise.py
+[ 17%] Shebangin uhd_siggen
+[ 17%] Built target pygen_gr_channels_python_channels_3dd2d
+[ 17%] Shebangin spectrum_inversion.py
+[ 17%] Shebangin usrp_nbfm_ptt.py
+Scanning dependencies of target _pmt_swig_doc_tag
+[ 17%] Built target pygen_gr_uhd_apps_6b0b2
+[ 17%] Shebangin gr_plot_fft_c
+[ 17%] Shebangin gr_plot_fft_f
+[ 17%] Shebangin test_resampler.py
+[ 18%] Shebangin usrp_nbfm_rcv.py
+[ 18%] Shebangin uhd_siggen_gui
+[ 18%] Shebangin usrp_spectrum_sense.py
+[ 18%] Shebangin gr_plot_psd
+[ 19%] Building CXX object gnuradio-runtime/swig/CMakeFiles/_pmt_swig_doc_tag.dir/_pmt_swig_doc_tag.cpp.o
+[ 19%] Shebangin gr_plot_psd_f
+[ 19%] Shebangin usrp_tv_rcv_nogui.py
+[ 19%] Shebangin gr_plot_psd_c
+[ 19%] Built target pygen_gr_audio_examples_python_1b962
+[ 19%] Shebangin gr_plot_float
+[ 19%] Shebangin gr_plot_int
+[ 19%] Shebangin usrp_tv_rcv.py
+[ 19%] Shebangin uhd_rx_nogui
+[ 19%] Shebangin usrp_wfm_rcv2_nogui.py
+[ 19%] Built target uhd_grc_xml_blocks
+[ 19%] Shebangin gr_plot_short
+Scanning dependencies of target volk_obj
+[ 20%] Shebangin gr_plot_iq
+[ 20%] Shebangin usrp_wfm_rcv_fmdet.py
+[ 20%] Built target pygen_gr_utils_python_utils_2cdf0
+[ 20%] Built target pygen_gr_uhd_apps_b5805
+[ 20%] Linking CXX executable _pmt_swig_doc_tag
+[ 20%] Shebangin usrp_wfm_rcv_nogui.py
+[ 20%] Shebangin gr_plot_qt
+[ 20%] Shebangin usrp_wfm_rcv_pll.py
+[ 20%] Shebangin gr_read_file_metadata
+[ 20%] Shebangin usrp_wfm_rcv.py
+[ 20%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32fc_32f_dot_prod_32fc_unrollasm.s.o
+[ 20%] Shebangin usrp_wfm_rcv_sca.py
+[ 20%] Built target pygen_gr_digital_python_digital_0fa2e
+[ 20%] Building CXX object gnuradio-runtime/lib/pmt/CMakeFiles/gnuradio-pmt.dir/pmt.cc.o
+[ 20%] Shebangin usrp_wxapt_rcv.py
+[ 20%] Shebangin grcc
+[ 20%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32f_s32f_multiply_32f_neonasm.s.o
+[ 20%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_16i_max_star_horizontal_16i.s.o
+[ 20%] Building CXX object gnuradio-runtime/lib/pmt/CMakeFiles/gnuradio-pmt.dir/pmt_io.cc.o
+[ 20%] Building CXX object gnuradio-runtime/lib/pmt/CMakeFiles/gnuradio-pmt.dir/pmt_pool.cc.o
+[ 20%] Building CXX object gnuradio-runtime/lib/pmt/CMakeFiles/gnuradio-pmt.dir/pmt_serialize.cc.o
+[ 20%] Built target pygen_gr_utils_python_utils_c1b8f
+[ 20%] Built target pygen_gr_uhd_examples_python_0fa0e
+[ 20%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32fc_x2_multiply_32fc_neonasm.s.o
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32fc_32f_dot_prod_32fc_a_neonasm.s.o
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32f_x2_add_32f_neonasm.s.o
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32fc_32f_dot_prod_32fc_a_neonasmvmla.s.o
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32f_x2_dot_prod_32f_neonasm_opts.s.o
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32f_x2_add_32f_neonpipeline.s.o
+[ 21%] Built target pygen_gr_utils_python_modtool_bf834
+[ 21%] Built target _pmt_swig_doc_tag
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32fc_32f_dot_prod_32fc_a_neonpipeline.s.o
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32f_x2_dot_prod_32f_neonasm.s.o
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32fc_x2_dot_prod_32fc_neonasm_opttests.s.o
+[ 21%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32fc_s32f_magnitude_16i_a_orc_impl.c.o
+[ 21%] Building ASM object volk/lib/CMakeFiles/volk_obj.dir/__/kernels/volk/asm/neon/volk_32fc_x2_dot_prod_32fc_neonasm.s.o
+[ 21%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_x2_divide_32f_a_orc_impl.c.o
+Scanning dependencies of target pmt_swig_swig_doc
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_16ic_magnitude_16i_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32i_x2_and_32i_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_16ic_deinterleave_16i_x2_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_16ic_s32f_deinterleave_32f_x2_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_x2_max_32f_a_orc_impl.c.o
+[ 22%] Generating doxygen xml for pmt_swig_doc docs
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32i_x2_or_32i_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_s32f_multiply_32f_a_orc_impl.c.o
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/buildroot-build/volk/lib/volk_32fc_s32f_magnitude_16i_a_orc_impl.c: In function ‘_backup_volk_32fc_s32f_magnitude_16i_a_orc_impl’:
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/buildroot-build/volk/lib/volk_32fc_s32f_magnitude_16i_a_orc_impl.c:316:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        if (tmp == 0x80000000 && !(var48.i&0x80000000)) tmp = 0x7fffffff;
+                ^~
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_x2_multiply_32f_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_s32f_normalize_a_orc_impl.c.o
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/buildroot-build/volk/lib/volk_16ic_magnitude_16i_a_orc_impl.c: In function ‘_backup_volk_16ic_magnitude_16i_a_orc_impl’:
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/buildroot-build/volk/lib/volk_16ic_magnitude_16i_a_orc_impl.c:374:16: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+        if (tmp == 0x80000000 && !(var52.i&0x80000000)) tmp = 0x7fffffff;
+                ^~
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_x2_add_32f_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_sqrt_32f_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_8i_convert_16i_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_16ic_deinterleave_real_8i_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_x2_dot_prod_32f_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32fc_x2_multiply_32fc_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_8i_s32f_convert_32f_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32fc_magnitude_32f_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_x2_min_32f_a_orc_impl.c.o
+[ 22%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32f_x2_subtract_32f_a_orc_impl.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32fc_32f_multiply_32fc_a_orc_impl.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_32fc_s32fc_multiply_32fc_a_orc_impl.c.o
+[ 23%] Generating python docstrings for pmt_swig_doc
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_16sc_magnitude_32f_aligned16_orc_impl.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_16u_byteswap_a_orc_impl.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_prefs.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/constants.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_rank_archs.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_malloc.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_cpu.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_machines.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_machine_generic_orc.c.o
+[ 23%] Building C object volk/lib/CMakeFiles/volk_obj.dir/volk_machine_neon_hardfp_orc.c.o
+In file included from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/buildroot-build/volk/lib/volk_machine_neon_hardfp_orc.c:123:0:
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/volk_32fc_s32fc_multiply_32fc.h: In function ‘volk_32fc_s32fc_multiply_32fc_neon’:
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/kernels/volk/volk_32fc_s32fc_multiply_32fc.h:282:16: warning: unused variable ‘cPtr’ [-Wunused-variable]
+     lv_32fc_t* cPtr = cVector;
+                ^~~~
+[ 23%] Built target pmt_swig_swig_doc
+Scanning dependencies of target _pmt_swig_swig_tag
+[ 23%] Building CXX object gnuradio-runtime/swig/CMakeFiles/_pmt_swig_swig_tag.dir/_pmt_swig_swig_tag.cpp.o
+[ 23%] Linking CXX executable _pmt_swig_swig_tag
+[ 23%] Built target _pmt_swig_swig_tag
+[ 23%] Generating pmt_swig.tag
+Scanning dependencies of target pmt_swig_gnuradio_runtime_swig_7dd5e
+[ 23%] Building CXX object gnuradio-runtime/swig/CMakeFiles/pmt_swig_gnuradio_runtime_swig_7dd5e.dir/pmt_swig_gnuradio_runtime_swig_7dd5e.cpp.o
+[ 24%] Linking CXX executable pmt_swig_gnuradio_runtime_swig_7dd5e
+Swig source
+[ 24%] Built target volk_obj
+Scanning dependencies of target volk
+[ 24%] Linking C shared library libvolk.so
+[ 24%] Built target volk
+Scanning dependencies of target volk-config-info
+Scanning dependencies of target volk_profile
+[ 24%] Building CXX object volk/apps/CMakeFiles/volk-config-info.dir/volk-config-info.cc.o
+[ 24%] Building CXX object volk/apps/CMakeFiles/volk_profile.dir/__/lib/qa_utils.cc.o
+[ 24%] Building CXX object volk/apps/CMakeFiles/volk_profile.dir/volk_profile.cc.o
+[ 24%] Linking CXX shared library libgnuradio-pmt-3.7.11.so
+[ 25%] Built target gnuradio-pmt
+Scanning dependencies of target gnuradio-runtime
+[ 25%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/messages/msg_accepter_msgq.cc.o
+[ 25%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/constants.cc.o
+[ 25%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/thread/thread_body_wrapper.cc.o
+[ 25%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/math/random.cc.o
+[ 25%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/messages/msg_accepter.cc.o
+[ 25%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/thread/thread.cc.o
+[ 25%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/messages/msg_queue.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/math/fast_atan2f.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/thread/thread_group.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/math/fxpt.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/messages/msg_producer.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/math/sincos.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/basic_block.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/block.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/block_detail.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/block_executor.cc.o
+[ 26%] Built target pmt_swig_gnuradio_runtime_swig_7dd5e
+Scanning dependencies of target pygen_gnuradio_runtime_swig_86878
+[ 26%] Generating pmt_swig.pyc
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/block_gateway_impl.cc.o
+[ 26%] Generating pmt_swig.pyo
+[ 26%] Built target pygen_gnuradio_runtime_swig_86878
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/vector:69:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/lib/qa_utils.h:8,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/lib/qa_utils.cc:1:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc: In member function ‘void std::vector<_Tp, _Alloc>::_M_insert_aux(std::vector<_Tp, _Alloc>::iterator, const _Tp&) [with _Tp = double; _Alloc = std::allocator<double>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc:326:5: note: parameter passing for argument of type ‘std::vector<double>::iterator {aka __gnu_cxx::__normal_iterator<double*, std::vector<double> >}’ will change in GCC 7.1
+     vector<_Tp, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/block_registry.cc.o
+[ 26%] Linking CXX executable volk-config-info
+[ 26%] Built target volk-config-info
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/buffer.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/circular_file.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/complex_vec_test.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/feval.cc.o
+[ 26%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/flat_flowgraph.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/flowgraph.cc.o
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/vector:64:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/lib/qa_utils.h:8,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/volk/lib/qa_utils.cc:1:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_vector.h: In function ‘bool run_volk_tests(volk_func_desc_t, void (*)(), std::__cxx11::string, float, lv_32fc_t, unsigned int, unsigned int, std::vector<volk_test_results_t>*, std::__cxx11::string, bool)’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_vector.h:926:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<double*, std::vector<double> >’ will change in GCC 7.1
+    _M_insert_aux(end(), __x);
+    ^~~~~~~~~~~~~
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/hier_block2.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/hier_block2_detail.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/io_signature.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/high_res_timer.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/local_sighandler.cc.o
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/local_sighandler.cc: In destructor ‘gr::local_sighandler::~local_sighandler()’:
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/local_sighandler.cc:58:43: warning: in C++11 this throw will terminate because destructors default to noexcept [-Wc++11-compat]
+       throw std::runtime_error("sigaction");
+                                           ^
+[ 27%] Building C object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/malloc16.c.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/logger.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/message.cc.o
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/vector:69:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/types.h:28,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/runtime_types.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/buffer.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/buffer.cc:27:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc: In member function ‘void std::vector<_Tp, _Alloc>::_M_insert_aux(std::vector<_Tp, _Alloc>::iterator, const _Tp&) [with _Tp = gr::tag_t; _Alloc = std::allocator<gr::tag_t>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc:326:5: note: parameter passing for argument of type ‘std::vector<gr::tag_t>::iterator {aka __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >}’ will change in GCC 7.1
+     vector<_Tp, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/misc.cc.o
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc: In member function ‘void std::vector<_Tp, _Alloc>::_M_fill_insert(std::vector<_Tp, _Alloc>::iterator, std::vector<_Tp, _Alloc>::size_type, const value_type&) [with _Tp = gr::tag_t; _Alloc = std::allocator<gr::tag_t>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc:449:5: note: parameter passing for argument of type ‘std::vector<gr::tag_t>::iterator {aka __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >}’ will change in GCC 7.1
+     vector<_Tp, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/vector:69:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/types.h:28,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/runtime_types.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/block_detail.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/block_detail.cc:27:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc: In member function ‘void std::vector<_Tp, _Alloc>::_M_insert_aux(std::vector<_Tp, _Alloc>::iterator, const _Tp&) [with _Tp = gr::tag_t; _Alloc = std::allocator<gr::tag_t>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc:326:5: note: parameter passing for argument of type ‘std::vector<gr::tag_t>::iterator {aka __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >}’ will change in GCC 7.1
+     vector<_Tp, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/vector:64:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/types.h:28,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/runtime_types.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/buffer.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/buffer.cc:27:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_vector.h: In member function ‘void gr::buffer_reader::get_tags_in_range(std::vector<gr::tag_t>&, uint64_t, uint64_t, long int)’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_vector.h:926:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    _M_insert_aux(end(), __x);
+    ^~~~~~~~~~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc: In member function ‘void std::vector<_Tp, _Alloc>::_M_fill_insert(std::vector<_Tp, _Alloc>::iterator, std::vector<_Tp, _Alloc>::size_type, const value_type&) [with _Tp = gr::tag_t; _Alloc = std::allocator<gr::tag_t>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc:449:5: note: parameter passing for argument of type ‘std::vector<gr::tag_t>::iterator {aka __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >}’ will change in GCC 7.1
+     vector<_Tp, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/vector:64:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/types.h:28,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/runtime_types.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/block_detail.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/block_detail.cc:27:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_vector.h: In member function ‘void gr::block_detail::get_tags_in_range(std::vector<gr::tag_t>&, unsigned int, uint64_t, uint64_t, const pmt_t&, long int)’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_vector.h:926:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    _M_insert_aux(end(), __x);
+    ^~~~~~~~~~~~~
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/msg_accepter.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/msg_handler.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/msg_queue.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/pagesize.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/prefs.cc.o
+[ 27%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/realtime.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/realtime_impl.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/scheduler.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/scheduler_sts.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/scheduler_tpb.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/single_threaded_scheduler.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/sptr_magic.cc.o
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/vector:69:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/types.h:28,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/runtime_types.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/block_executor.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/block_executor.cc:27:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc: In member function ‘void std::vector<_Tp, _Alloc>::_M_fill_insert(std::vector<_Tp, _Alloc>::iterator, std::vector<_Tp, _Alloc>::size_type, const value_type&) [with _Tp = long long unsigned int; _Alloc = std::allocator<long long unsigned int>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/vector.tcc:449:5: note: parameter passing for argument of type ‘std::vector<long long unsigned int>::iterator {aka __gnu_cxx::__normal_iterator<long long unsigned int*, std::vector<long long unsigned int> >}’ will change in GCC 7.1
+     vector<_Tp, _Alloc>::
+     ^~~~~~~~~~~~~~~~~~~
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/vector:64:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/types.h:28,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/runtime_types.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/block_executor.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/lib/block_executor.cc:27:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_vector.h: In member function ‘void std::vector<_Tp, _Alloc>::resize(std::vector<_Tp, _Alloc>::size_type, std::vector<_Tp, _Alloc>::value_type) [with _Tp = long long unsigned int; _Alloc = std::allocator<long long unsigned int>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_vector.h:1074:9: note: parameter passing for argument of type ‘std::vector<long long unsigned int>::iterator {aka __gnu_cxx::__normal_iterator<long long unsigned int*, std::vector<long long unsigned int> >}’ will change in GCC 7.1
+       { _M_fill_insert(__position, __n, __x); }
+         ^~~~~~~~~~~~~~
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/sync_block.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/sync_decimator.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/sync_interpolator.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/sys_paths.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/tagged_stream_block.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/test.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/top_block_impl.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/top_block.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/tpb_detail.cc.o
+[ 28%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/tpb_thread_body.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/vmcircbuf.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/vmcircbuf_createfilemapping.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/vmcircbuf_mmap_shm_open.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/vmcircbuf_mmap_tmpfile.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/vmcircbuf_prefs.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/vmcircbuf_sysv_shm.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/controlport/rpcmanager.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/controlport/rpcserver_aggregator.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/controlport/rpcserver_booter_aggregator.cc.o
+[ 29%] Building CXX object gnuradio-runtime/lib/CMakeFiles/gnuradio-runtime.dir/controlport/rpcserver_selector.cc.o
+[ 30%] Linking CXX executable volk_profile
+[ 30%] Built target volk_profile
+sh: 1: latex: not found
+error: Problems running latex. Check your installation or look for typos in _formulas.tex and check _formulas.log!
+sh: 1: dvips: not found
+error: Problems running dvips. Check your installation!
+[ 30%] Linking CXX shared library libgnuradio-runtime-3.7.11.so
+[ 30%] Built target gnuradio-runtime
+Scanning dependencies of target gnuradio-config-info
+Scanning dependencies of target gnuradio-audio
+Scanning dependencies of target gnuradio-uhd
+Scanning dependencies of target gnuradio-fft
+[ 30%] Building CXX object gnuradio-runtime/apps/CMakeFiles/gnuradio-config-info.dir/gnuradio-config-info.cc.o
+Scanning dependencies of target _pmt_swig
+[ 30%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/audio_registry.cc.o
+[ 30%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/alsa/alsa_source.cc.o
+[ 30%] Generating abs_ss_impl.h, abs_ii_impl.h, abs_ff_impl.h
+[ 30%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/alsa/alsa_sink.cc.o
+[ 30%] Generating vector_source_b_impl.cc, vector_source_s_impl.cc, vector_source_i_impl.cc, vector_source_f_impl.cc, vector_source_c_impl.cc
+[ 30%] Generating abs_ss_impl.cc, abs_ii_impl.cc, abs_ff_impl.cc
+[ 30%] Generating add_ss_impl.cc, add_ii_impl.cc, add_cc_impl.cc
+[ 30%] Generating add_ss_impl.h, add_ii_impl.h, add_cc_impl.h
+[ 31%] Building CXX object gr-fft/lib/CMakeFiles/gnuradio-fft.dir/fft.cc.o
+[ 31%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/alsa/alsa_impl.cc.o
+[ 31%] Building CXX object gr-uhd/lib/CMakeFiles/gnuradio-uhd.dir/usrp_source_impl.cc.o
+[ 31%] Building CXX object gnuradio-runtime/swig/CMakeFiles/_pmt_swig.dir/pmt_swigPYTHON_wrap.cxx.o
+[ 31%] Building CXX object gr-uhd/lib/CMakeFiles/gnuradio-uhd.dir/usrp_sink_impl.cc.o
+[ 31%] Building CXX object gr-uhd/lib/CMakeFiles/gnuradio-uhd.dir/usrp_block_impl.cc.o
+[ 31%] Generating add_const_vbb_impl.h, add_const_vss_impl.h, add_const_vii_impl.h, add_const_vff_impl.h, add_const_vcc_impl.h
+[ 31%] Generating and_bb_impl.h, and_ss_impl.h, and_ii_impl.h
+[ 31%] Generating add_const_vbb_impl.cc, add_const_vss_impl.cc, add_const_vii_impl.cc, add_const_vff_impl.cc, add_const_vcc_impl.cc
+[ 31%] Generating and_bb_impl.cc, and_ss_impl.cc, and_ii_impl.cc
+[ 31%] Generating and_const_bb_impl.h, and_const_ss_impl.h, and_const_ii_impl.h
+[ 31%] Generating and_const_bb_impl.cc, and_const_ss_impl.cc, and_const_ii_impl.cc
+[ 31%] Generating argmax_fs_impl.h, argmax_is_impl.h, argmax_ss_impl.h
+[ 31%] Generating argmax_fs_impl.cc, argmax_is_impl.cc, argmax_ss_impl.cc
+[ 31%] Generating divide_ss_impl.h, divide_ii_impl.h
+[ 32%] Generating divide_ss_impl.cc, divide_ii_impl.cc
+[ 32%] Generating max_ss_impl.h, max_ii_impl.h, max_ff_impl.h
+[ 32%] Generating integrate_ss_impl.h, integrate_ii_impl.h, integrate_ff_impl.h, integrate_cc_impl.h
+[ 32%] Generating max_ss_impl.cc, max_ii_impl.cc, max_ff_impl.cc
+[ 32%] Generating integrate_ss_impl.cc, integrate_ii_impl.cc, integrate_ff_impl.cc, integrate_cc_impl.cc
+[ 32%] Generating min_ss_impl.h, min_ii_impl.h, min_ff_impl.h
+[ 32%] Generating min_ss_impl.cc, min_ii_impl.cc, min_ff_impl.cc
+[ 32%] Generating moving_average_ss_impl.h, moving_average_ii_impl.h, moving_average_ff_impl.h, moving_average_cc_impl.h
+[ 32%] Generating moving_average_ss_impl.cc, moving_average_ii_impl.cc, moving_average_ff_impl.cc, moving_average_cc_impl.cc
+[ 32%] Generating multiply_ss_impl.h, multiply_ii_impl.h
+[ 32%] Generating multiply_ss_impl.cc, multiply_ii_impl.cc
+[ 32%] Generating multiply_const_ss_impl.h, multiply_const_ii_impl.h
+[ 32%] Generating multiply_const_ss_impl.cc, multiply_const_ii_impl.cc
+[ 32%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/oss/oss_source.cc.o
+[ 32%] Generating multiply_const_vss_impl.h, multiply_const_vii_impl.h
+[ 32%] Generating multiply_const_vss_impl.cc, multiply_const_vii_impl.cc
+[ 32%] Generating mute_ss_impl.h, mute_ii_impl.h, mute_ff_impl.h, mute_cc_impl.h
+[ 33%] Generating mute_ss_impl.cc, mute_ii_impl.cc, mute_ff_impl.cc, mute_cc_impl.cc
+[ 33%] Generating not_bb_impl.h, not_ss_impl.h, not_ii_impl.h
+[ 33%] Generating or_bb_impl.h, or_ss_impl.h, or_ii_impl.h
+[ 33%] Generating not_bb_impl.cc, not_ss_impl.cc, not_ii_impl.cc
+[ 33%] Generating or_bb_impl.cc, or_ss_impl.cc, or_ii_impl.cc
+[ 33%] Generating peak_detector_fb_impl.h, peak_detector_ib_impl.h, peak_detector_sb_impl.h
+[ 33%] Generating peak_detector_fb_impl.cc, peak_detector_ib_impl.cc, peak_detector_sb_impl.cc
+[ 33%] Generating probe_signal_b_impl.cc, probe_signal_s_impl.cc, probe_signal_i_impl.cc, probe_signal_f_impl.cc, probe_signal_c_impl.cc
+[ 33%] Generating probe_signal_vb_impl.h, probe_signal_vs_impl.h, probe_signal_vi_impl.h, probe_signal_vf_impl.h, probe_signal_vc_impl.h
+[ 33%] Generating probe_signal_b_impl.h, probe_signal_s_impl.h, probe_signal_i_impl.h, probe_signal_f_impl.h, probe_signal_c_impl.h
+[ 33%] Generating probe_signal_vb_impl.cc, probe_signal_vs_impl.cc, probe_signal_vi_impl.cc, probe_signal_vf_impl.cc, probe_signal_vc_impl.cc
+[ 33%] Generating sample_and_hold_bb_impl.h, sample_and_hold_ss_impl.h, sample_and_hold_ii_impl.h, sample_and_hold_ff_impl.h
+[ 33%] Generating sub_ss_impl.h, sub_ii_impl.h, sub_cc_impl.h
+[ 33%] Generating sample_and_hold_bb_impl.cc, sample_and_hold_ss_impl.cc, sample_and_hold_ii_impl.cc, sample_and_hold_ff_impl.cc
+[ 33%] Generating sub_ss_impl.cc, sub_ii_impl.cc, sub_cc_impl.cc
+[ 34%] Generating tsb_vector_sink_b_impl.h, tsb_vector_sink_s_impl.h, tsb_vector_sink_i_impl.h, tsb_vector_sink_f_impl.h, tsb_vector_sink_c_impl.h
+[ 34%] Generating tsb_vector_sink_b_impl.cc, tsb_vector_sink_s_impl.cc, tsb_vector_sink_i_impl.cc, tsb_vector_sink_f_impl.cc, tsb_vector_sink_c_impl.cc
+[ 34%] Generating xor_bb_impl.h, xor_ss_impl.h, xor_ii_impl.h
+[ 34%] Generating packed_to_unpacked_bb_impl.h, packed_to_unpacked_ss_impl.h, packed_to_unpacked_ii_impl.h
+[ 34%] Generating xor_bb_impl.cc, xor_ss_impl.cc, xor_ii_impl.cc
+[ 34%] Generating packed_to_unpacked_bb_impl.cc, packed_to_unpacked_ss_impl.cc, packed_to_unpacked_ii_impl.cc
+[ 34%] Generating vector_insert_b_impl.h, vector_insert_s_impl.h, vector_insert_i_impl.h, vector_insert_f_impl.h, vector_insert_c_impl.h
+[ 34%] Generating unpacked_to_packed_bb_impl.h, unpacked_to_packed_ss_impl.h, unpacked_to_packed_ii_impl.h
+[ 34%] Generating unpacked_to_packed_bb_impl.cc, unpacked_to_packed_ss_impl.cc, unpacked_to_packed_ii_impl.cc
+[ 34%] Generating vector_insert_b_impl.cc, vector_insert_s_impl.cc, vector_insert_i_impl.cc, vector_insert_f_impl.cc, vector_insert_c_impl.cc
+[ 34%] Generating vector_sink_b_impl.h, vector_sink_s_impl.h, vector_sink_i_impl.h, vector_sink_f_impl.h, vector_sink_c_impl.h
+[ 34%] Generating vector_source_b_impl.h, vector_source_s_impl.h, vector_source_i_impl.h, vector_source_f_impl.h, vector_source_c_impl.h
+[ 34%] Generating vector_sink_b_impl.cc, vector_sink_s_impl.cc, vector_sink_i_impl.cc, vector_sink_f_impl.cc, vector_sink_c_impl.cc
+[ 34%] Building CXX object gr-fft/lib/CMakeFiles/gnuradio-fft.dir/fft_vcc_fftw.cc.o
+[ 34%] Building CXX object gr-fft/lib/CMakeFiles/gnuradio-fft.dir/fft_vfc_fftw.cc.o
+[ 34%] Building CXX object gr-fft/lib/CMakeFiles/gnuradio-fft.dir/goertzel.cc.o
+[ 34%] Building CXX object gr-fft/lib/CMakeFiles/gnuradio-fft.dir/goertzel_fc_impl.cc.o
+[ 34%] Built target doxygen_target
+[ 34%] Building CXX object gr-fft/lib/CMakeFiles/gnuradio-fft.dir/window.cc.o
+[ 34%] Building CXX object gr-fft/lib/CMakeFiles/gnuradio-fft.dir/ctrlport_probe_psd_impl.cc.o
+[ 34%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/oss/oss_sink.cc.o
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-fft/lib/fft.cc: In function ‘void gr::fft::config_threading(int)’:
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-fft/lib/fft.cc:111:18: warning: unused variable ‘fftw_threads_inited’ [-Wunused-variable]
+       static int fftw_threads_inited = 0;
+                  ^~~~~~~~~~~~~~~~~~~
+Scanning dependencies of target gnuradio-blocks
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-fft/lib/fft.cc: At global scope:
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-fft/lib/fft.cc:111:18: warning: ‘fftw_threads_inited’ defined but not used [-Wunused-variable]
+[ 34%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/abs_ss_impl.cc.o
+[ 34%] Linking CXX executable gnuradio-config-info
+[ 34%] Built target gnuradio-config-info
+[ 34%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/abs_ii_impl.cc.o
+[ 35%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/abs_ff_impl.cc.o
+[ 35%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/portaudio/portaudio_impl.cc.o
+[ 35%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/portaudio/portaudio_source.cc.o
+[ 36%] Building CXX object gr-audio/lib/CMakeFiles/gnuradio-audio.dir/portaudio/portaudio_sink.cc.o
+[ 36%] Building CXX object gr-uhd/lib/CMakeFiles/gnuradio-uhd.dir/amsg_source_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/add_ss_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/add_ii_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/add_cc_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/add_const_vbb_impl.cc.o
+[ 36%] Linking CXX shared library libgnuradio-fft-3.7.11.so
+[ 36%] Built target gnuradio-fft
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/add_const_vss_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/add_const_vii_impl.cc.o
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/memory:65:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/config/no_tr1/memory.hpp:21,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/smart_ptr/shared_ptr.hpp:23,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/shared_ptr.hpp:17,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/buildroot-build/gnuradio-runtime/swig/pmt_swigPYTHON_wrap.cxx:3173:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_uninitialized.h: In function ‘_ForwardIterator std::__uninitialized_copy_a(_InputIterator, _InputIterator, _ForwardIterator, std::allocator<_Tp>&) [with _InputIterator = __gnu_cxx::__normal_iterator<const std::complex<double>*, std::vector<std::complex<double> > >; _ForwardIterator = std::complex<double>*; _Tp = std::complex<double>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_uninitialized.h:279:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<const std::complex<double>*, std::vector<std::complex<double> > >’ will change in GCC 7.1
+     __uninitialized_copy_a(_InputIterator __first, _InputIterator __last,
+     ^~~~~~~~~~~~~~~~~~~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_uninitialized.h:279:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<const std::complex<double>*, std::vector<std::complex<double> > >’ will change in GCC 7.1
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algobase.h:71:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/char_traits.h:39,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/string:40,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/stdexcept:39,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.cc:24:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/predefined_ops.h: In member function ‘bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >; _Iterator2 = __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >; _Compare = bool (*)(const gr::tag_t&, const gr::tag_t&)]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/predefined_ops.h:124:9: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+         operator()(_Iterator1 __it1, _Iterator2 __it2)
+         ^~~~~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/predefined_ops.h:124:9: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/predefined_ops.h:124:9: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/predefined_ops.h:124:9: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/algorithm:62:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/smart_ptr/shared_ptr.hpp:39,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/shared_ptr.hpp:17,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sptr_magic.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/basic_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sync_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/include/gnuradio/uhd/usrp_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_block_impl.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.h:23,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.cc:25:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h: In function ‘void std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >; _Compare = __gnu_cxx::__ops::_Val_comp_iter<bool (*)(const gr::tag_t&, const gr::tag_t&)>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1818:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+     __unguarded_linear_insert(_RandomAccessIterator __last,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h: In function ‘void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(const gr::tag_t&, const gr::tag_t&)>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1837:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+     __insertion_sort(_RandomAccessIterator __first,
+     ^~~~~~~~~~~~~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1837:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1844:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    if (__comp(__i, __first))
+    ^~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1844:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1844:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/add_const_vff_impl.cc.o
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:61:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/algorithm:62,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/smart_ptr/shared_ptr.hpp:39,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/shared_ptr.hpp:17,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sptr_magic.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/basic_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sync_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/include/gnuradio/uhd/usrp_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_block_impl.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.h:23,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.cc:25:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h: In function ‘void std::__adjust_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >; _Distance = int; _Tp = gr::tag_t; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(const gr::tag_t&, const gr::tag_t&)>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:209:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+     __adjust_heap(_RandomAccessIterator __first, _Distance __holeIndex,
+     ^~~~~~~~~~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:217:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    if (__comp(__first + __secondChild,
+    ^~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:217:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:217:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h: In function ‘void std::__pop_heap(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(const gr::tag_t&, const gr::tag_t&)>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:237:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+     __pop_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+     ^~~~~~~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:237:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:237:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/algorithm:62:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/smart_ptr/shared_ptr.hpp:39,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/shared_ptr.hpp:17,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sptr_magic.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/basic_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sync_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/include/gnuradio/uhd/usrp_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_block_impl.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.h:23,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.cc:25:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h: In function ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >; _Size = int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(const gr::tag_t&, const gr::tag_t&)>]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1937:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+     __introsort_loop(_RandomAccessIterator __first,
+     ^~~~~~~~~~~~~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1937:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:61:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/algorithm:62,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/smart_ptr/shared_ptr.hpp:39,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/shared_ptr.hpp:17,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sptr_magic.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/basic_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sync_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/include/gnuradio/uhd/usrp_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_block_impl.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.h:23,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.cc:25:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:400:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    std::__pop_heap(__first, __last, __last, __comp);
+    ^~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:400:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_heap.h:400:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+In file included from /home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/algorithm:62:0,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/smart_ptr/shared_ptr.hpp:39,
+                 from /home/sabooh/buildroot_try5/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/boost/shared_ptr.hpp:17,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sptr_magic.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/basic_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gnuradio-runtime/include/gnuradio/sync_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/include/gnuradio/uhd/usrp_block.h:27,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_block_impl.h:26,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.h:23,
+                 from /home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.cc:25:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:81:7: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+       if (__comp(__a, __b))
+       ^~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:81:7: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:81:7: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:83:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    if (__comp(__b, __c))
+    ^~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:83:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:83:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:85:9: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    else if (__comp(__a, __c))
+         ^~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:85:9: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:85:9: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:90:12: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+       else if (__comp(__a, __c))
+            ^~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:90:12: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:90:12: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:92:12: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+       else if (__comp(__b, __c))
+            ^~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:92:12: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:92:12: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1899:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    while (__comp(__first, __pivot))
+    ^~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1899:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1899:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1902:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    while (__comp(__pivot, __last))
+    ^~~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1902:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1902:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1951:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    std::__introsort_loop(__cut, __last, __depth_limit, __comp);
+    ^~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h: In function ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >; _Compare = bool (*)(const gr::tag_t&, const gr::tag_t&)]’:
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:4727:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+     sort(_RandomAccessIterator __first, _RandomAccessIterator __last,
+     ^~~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:4727:5: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1965:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    std::__introsort_loop(__first, __last,
+    ^~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1882:4: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+    std::__insertion_sort(__first, __first + int(_S_threshold), __comp);
+    ^~~
+/home/sabooh/buildroot_try5/buildroot/output/host/opt/ext-toolchain/arm-linux-gnueabihf/include/c++/6.4.1/bits/stl_algo.h:1887:2: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+  std::__insertion_sort(__first, __last, __comp);
+  ^~~
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.cc: In member function ‘void gr::uhd::usrp_sink_impl::tag_work(int&)’:
+/home/sabooh/buildroot_try5/buildroot/output/build/gnuradio-3.7.11/gr-uhd/lib/usrp_sink_impl.cc:417:67: note: parameter passing for argument of type ‘__gnu_cxx::__normal_iterator<gr::tag_t*, std::vector<gr::tag_t> >’ will change in GCC 7.1
+       std::sort(_tags.begin(), _tags.end(), tag_t::offset_compare);
+                                                                   ^
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/add_const_vcc_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/and_bb_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/and_ss_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/and_ii_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/and_const_bb_impl.cc.o
+[ 36%] Building CXX object gr-blocks/lib/CMakeFiles/gnuradio-blocks.dir/and_const_ss_impl.cc.o
+[ 36%] Linking CXX shared library libgnuradio-uhd-3.7.11.so
